@@ -7,6 +7,25 @@ public static class ColdWarRules
     public const float EngineTechnologyFactor = 2.25f;
     public const float EngineTorqueCoefficient = 1.15f;
     public const float EngineCostMultiplier = 1.60f;
+    public static readonly DateTime ModernStart = new(1945, 9, 3);
+    public static readonly DateTime Horizon = new(1991, 12, 31);
+    public static int ConfirmLastModernEra(ReadOnlySpan<DateTime> starts)
+    {
+        if (starts.IsEmpty) return -1;
+        for (var i = 0; i < starts.Length; i++)
+            if (starts[i].Date == DateTime.MaxValue.Date || (i > 0 && starts[i].Date <= starts[i - 1].Date)) return -1;
+        return starts[^1].Date >= ModernStart ? starts.Length - 1 : -1;
+    }
+    public static DateTime ResolveTechnologyDate(DateTime date, ReadOnlySpan<DateTime> starts)
+    {
+        date = date.Date;
+        if (date == DateTime.MaxValue.Date)
+        {
+            var last = ConfirmLastModernEra(starts);
+            return last < 0 ? date : (starts[last].Date > Horizon ? starts[last].Date : Horizon);
+        }
+        return date >= ModernStart && date < Horizon ? Horizon : date;
+    }
     public static bool RecognizeLastEraSentinel(bool enabled, bool isExactMaximumDate, int requestedIndex, int confirmedLastColdWarIndex) =>
         enabled && isExactMaximumDate && confirmedLastColdWarIndex >= 0 && requestedIndex == confirmedLastColdWarIndex;
     public static bool IsColdWarEngine(float factor, float torque) =>

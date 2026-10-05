@@ -9,7 +9,7 @@ using Sprocket.Vehicles.Engines;
 
 namespace SprocketColdWarExpansionPack;
 
-[BepInPlugin("nl.roan.sprocket.coldwarexpansionpack", "Sprocket Cold War Expansion Pack", "0.1.3")]
+[BepInPlugin("nl.roan.sprocket.coldwarexpansionpack", "Sprocket Cold War Expansion Pack", "0.1.4")]
 [BepInDependency("nl.roan.sprocket.keybinds", BepInDependency.DependencyFlags.SoftDependency)]
 [BepInDependency("nl.roan.sprocket.shellselector", BepInDependency.DependencyFlags.SoftDependency)]
 [BepInDependency("nl.roan.sprocket.materialselector", BepInDependency.DependencyFlags.SoftDependency)]
@@ -31,7 +31,7 @@ public sealed class Plugin : BasePlugin
         core = new Harmony("nl.roan.sprocket.coldwarexpansionpack");
         try { core.PatchAll(typeof(ColdWarHooks)); }
         catch { core.UnpatchSelf(); Enabled = false; throw; }
-        Log.LogInfo("Review core 0.1.3 loaded: Coldwar playable with native era-array writeback and exact last-era date sentinel repair, technology horizon 1991-12-31; modern engine factor 2.25, torque 1.15, price x1.60. Native game validation required.");
+        Log.LogInfo("Core 0.1.4 loaded: native Coldwar unlock, validated date-based last-modern-era sentinel repair, technology horizon 1991-12-31 with future-era starts preserved; modern engine factor 2.25, torque 1.15, price x1.60. Native custom-era validation required.");
     }
     public override bool Unload() { Enabled = false; ColdWarHooks.Reset(); core?.UnpatchSelf(); return true; }
 
@@ -56,12 +56,13 @@ internal static class ColdWarHooks
     private static bool dateLogged;
     private static bool sentinelLogged;
     private static bool sentinelFrameLogged;
-    private static int confirmedLastColdWarIndex = -1;
-    internal static void Reset() { confirmedLastColdWarIndex = -1; dateLogged = sentinelLogged = sentinelFrameLogged = false; }
+    private static int confirmedLastModernIndex = -1;
+    private static DateTime[] eraStarts = Array.Empty<DateTime>();
+    internal static void Reset() { confirmedLastModernIndex = -1; eraStarts = Array.Empty<DateTime>(); dateLogged = sentinelLogged = sentinelFrameLogged = false; }
     [HarmonyPostfix, HarmonyPatch(typeof(VehiclesMain), nameof(VehiclesMain.LoadEras), new[] { typeof(string) })]
     private static void MakePlayable(Il2CppReferenceArray<EraDefinition> __result)
     {
-        confirmedLastColdWarIndex = -1;
+        Reset();
         if (!Plugin.Enabled || __result == null) return;
         var found = false;
         for (var index = 0; index < __result.Length; index++)
@@ -73,13 +74,30 @@ internal static class ColdWarHooks
                 era.Playable = true;
                 __result[index] = era;
                 found = __result[index].Playable;
-                if (found && index == __result.Length - 1 && string.Equals(__result[index].Name, "Coldwar", StringComparison.OrdinalIgnoreCase))
-                    confirmedLastColdWarIndex = index;
                 if (found) Plugin.ModLog.LogInfo("[CWEP] Native Coldwar era enabled; array writeback/readback verified; era boundary preserved.");
                 else Plugin.ModLog.LogError("[CWEP] Coldwar era writeback failed; vehicle-editor availability is not verified.");
             }
         }
-        if (!found) Plugin.ModLog.LogError("[CWEP] Native Coldwar era missing; restore the vanilla Eras files.");
+        if (!found) Plugin.ModLog.LogWarning("[CWEP] No era named Coldwar found; custom era names and playability preserved.");
+        try
+        {
+            var starts = new DateTime[__result.Length];
+            for (var i = 0; i < starts.Length; i++)
+            {
+                var era = __result[i];
+                if (era == null) throw new InvalidOperationException("Missing era definition");
+                var date = era.StartDate;
+                starts[i] = new DateTime(date.Year, date.Month, date.Day);
+            }
+            confirmedLastModernIndex = ColdWarRules.ConfirmLastModernEra(starts);
+            if (confirmedLastModernIndex >= 0)
+            {
+                eraStarts = starts;
+                Plugin.ModLog.LogInfo($"[CWEP] Validated last modern era index {confirmedLastModernIndex}, start {starts[^1]:yyyy-MM-dd}; names and custom playability preserved.");
+            }
+            else Plugin.ModLog.LogWarning("[CWEP] No validated last modern era; sentinel overrides disabled.");
+        }
+        catch (Exception ex) { Plugin.ModLog.LogWarning("[CWEP] Invalid era timeline; sentinel overrides disabled: " + ex.GetType().Name); }
     }
     // The native editor assigns GetEraEndDate(last) == MaxValue. Native IsInEra
     // excludes its end date, making that exact saved sentinel match no era.
@@ -87,10 +105,10 @@ internal static class ColdWarHooks
     [HarmonyPrefix, HarmonyPatch(typeof(VehicleClassifications), "IsInEra", new[] { typeof(TechDate), typeof(int) })]
     private static bool LastEraSentinel(TechDate __0, int __1, ref bool __result)
     {
-        if (!Plugin.Enabled || confirmedLastColdWarIndex < 0) return true;
-        if (!ColdWarRules.RecognizeLastEraSentinel(Plugin.Enabled, TechDate.Compare(__0, TechDate.MaxValue) == 0, __1, confirmedLastColdWarIndex)) return true;
+        if (!Plugin.Enabled || confirmedLastModernIndex < 0) return true;
+        if (!ColdWarRules.RecognizeLastEraSentinel(Plugin.Enabled, TechDate.Compare(__0, TechDate.MaxValue) == 0, __1, confirmedLastModernIndex)) return true;
         __result = true;
-        if (!sentinelLogged) { sentinelLogged = true; Plugin.ModLog.LogInfo("[CWEP] Native last-era MaxValue sentinel recognized as Coldwar; saved vehicle date preserved."); }
+        if (!sentinelLogged) { sentinelLogged = true; Plugin.ModLog.LogInfo("[CWEP] Native last-era MaxValue sentinel recognized by modern start date; saved vehicle date preserved."); }
         return false;
     }
     [HarmonyPrefix, HarmonyPatch(typeof(TechTreeLoader), nameof(TechTreeLoader.GetTechFrameAtDate), new[] { typeof(TechDate) })]
@@ -100,10 +118,12 @@ internal static class ColdWarHooks
         // Vehicle-local argument; no global player-era state and no mutation of saved blueprints.
         var first = TechDate.Parse(ColdWarRules.NativeEraStart);
         var last = TechDate.Parse(ColdWarRules.TechnologyHorizon);
-        if (confirmedLastColdWarIndex >= 0 && TechDate.Compare(__0, TechDate.MaxValue) == 0)
+        if (TechDate.Compare(__0, TechDate.MaxValue) == 0)
         {
-            __0 = last;
-            if (!sentinelFrameLogged) { sentinelFrameLogged = true; Plugin.ModLog.LogInfo("[CWEP] MaxValue technology request normalized to 1991-12-31; saved vehicle date preserved."); }
+            if (confirmedLastModernIndex < 0) return;
+            var resolved = ColdWarRules.ResolveTechnologyDate(DateTime.MaxValue, eraStarts);
+            __0 = TechDate.Parse(resolved.ToString("yyyy.MM.dd", System.Globalization.CultureInfo.InvariantCulture));
+            if (!sentinelFrameLogged) { sentinelFrameLogged = true; Plugin.ModLog.LogInfo($"[CWEP] MaxValue technology request normalized to {resolved:yyyy-MM-dd}; future-era start and saved vehicle date preserved."); }
             return;
         }
         if (TechDate.Compare(__0, first) < 0 || TechDate.Compare(__0, last) >= 0) return;

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "name": "SprocketColdWarExpansionPack",
-  "version": "0.1.0",
-  "status": "public-beta-user-tested",
+  "version": "0.1.1",
+  "status": "public-beta-era-fix-native-heavy-era-tested-custom-era-pending",
   "gameVersion": "0.2.55.5",
   "unityVersion": "6000.3.21f1",
   "bepinexVersion": "6.0.0-be.788",
@@ -20,22 +20,22 @@
       "file": "BepInEx/plugins/SprocketMaterialSelector.dll",
       "guid": "nl.roan.sprocket.materialselector",
       "name": "Sprocket Material Selector",
-      "version": "0.4.4",
-      "sha256": "CF8A78020360C2DF8EFF99A6B76364BFD8DCCBDBF231405AE0709EAEBCA1F69B"
+      "version": "0.4.5",
+      "sha256": "B40FE4E4141C3653F5B6BCBA282DE3F9C5C970B8F9A62C42F2E4D756BEE3F655"
     },
     {
       "file": "BepInEx/plugins/SprocketShellSelector.dll",
       "guid": "nl.roan.sprocket.shellselector",
       "name": "Sprocket Shell Selector",
-      "version": "0.12.3-heavyera.1",
-      "sha256": "C358CED0EF20E5AAC96316DB85755DDC7750C143444B7DC644DA35C48AB9FA59"
+      "version": "0.12.4",
+      "sha256": "CC82E9396C6D8DF7AD730737A8D6D7F906060D2EFDF81684F2F1ED8E89AE5B97"
     },
     {
       "file": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
       "guid": "nl.roan.sprocket.coldwarexpansionpack",
       "name": "Sprocket Cold War Expansion Pack",
-      "version": "0.1.3",
-      "sha256": "082B1023D27E12A79686CA3BB521A48F9392E8A74A80262AE7D3420B2B16ADF6"
+      "version": "0.1.4",
+      "sha256": "04EF808C69CCAE136826D659ABBD716E0551568EAB09E6F8C1F7E5BDC751E46B"
     },
     {
       "file": "BepInEx/plugins/SprocketHydropneumatic/SprocketHydropneumatic.dll",
@@ -62,8 +62,8 @@
       "file": "BepInEx/plugins/SprocketThermalSight/SprocketThermalSight.dll",
       "guid": "nl.roan.sprocket.thermalsight",
       "name": "SprocketThermalSight",
-      "version": "0.2.4",
-      "sha256": "BB42FCF3C99F4B8581C330E3776E4630AB508CEBFB153F50367E7727FBD60733"
+      "version": "0.2.5",
+      "sha256": "8419668564F873909DC196358CD9C95E55C657C388F30E4EC3E08646AD1EB1C7"
     },
     {
       "file": "BepInEx/plugins/SprocketSmokeLaunchers/SprocketSmokeLaunchers.dll",
@@ -121,8 +121,8 @@
     },
     {
       "path": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
-      "sha256": "082B1023D27E12A79686CA3BB521A48F9392E8A74A80262AE7D3420B2B16ADF6",
-      "bytes": 13312
+      "sha256": "04EF808C69CCAE136826D659ABBD716E0551568EAB09E6F8C1F7E5BDC751E46B",
+      "bytes": 15872
     },
     {
       "path": "BepInEx/plugins/SprocketHydropneumatic/assets/hydropneumatic-icon.png",
@@ -141,13 +141,13 @@
     },
     {
       "path": "BepInEx/plugins/SprocketMaterialSelector.dll",
-      "sha256": "CF8A78020360C2DF8EFF99A6B76364BFD8DCCBDBF231405AE0709EAEBCA1F69B",
-      "bytes": 65536
+      "sha256": "B40FE4E4141C3653F5B6BCBA282DE3F9C5C970B8F9A62C42F2E4D756BEE3F655",
+      "bytes": 67584
     },
     {
       "path": "BepInEx/plugins/SprocketShellSelector.dll",
-      "sha256": "C358CED0EF20E5AAC96316DB85755DDC7750C143444B7DC644DA35C48AB9FA59",
-      "bytes": 647680
+      "sha256": "CC82E9396C6D8DF7AD730737A8D6D7F906060D2EFDF81684F2F1ED8E89AE5B97",
+      "bytes": 648192
     },
     {
       "path": "BepInEx/plugins/SprocketSmokeLaunchers/MODULE-FACTS.json",
@@ -181,8 +181,8 @@
     },
     {
       "path": "BepInEx/plugins/SprocketThermalSight/SprocketThermalSight.dll",
-      "sha256": "BB42FCF3C99F4B8581C330E3776E4630AB508CEBFB153F50367E7727FBD60733",
-      "bytes": 56832
+      "sha256": "8419668564F873909DC196358CD9C95E55C657C388F30E4EC3E08646AD1EB1C7",
+      "bytes": 57856
     },
     {
       "path": "BepInEx/plugins/SprocketThermalSight/thermal-models.json",
@@ -201,8 +201,8 @@
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopeBase.xml",
-      "sha256": "B22B8D673DF0F19C1A9F5FDB290BF217036A65DE379D6B248C67F923EC2C44EA",
-      "bytes": 884
+      "sha256": "702FD0E8E5E83516BB48811B46293CD92B20005AE03EB447658D01D9DF9F08B2",
+      "bytes": 948
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopePart.xml",
@@ -394,5 +394,6 @@
       "sha256": "7CE59F2FD808166DFB8AFBE66B0B889784B0B67E20B8F982386D2B16018376A6",
       "bytes": 211
     }
-  ]
+  ],
+  "mastAssetRevision": "0.3.8-postwar.1"
 }
