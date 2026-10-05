@@ -1,5 +1,16 @@
 <!-- sp-compat {"hamish.sprocket": "0.2.55.5", "bepinex.bepinex": "6.0.0-be.788"} -->
 
+## Which ZIP should I download?
+
+**Choose ONE ZIP, not both. Most users should download the full Expansion Pack.**
+
+- **SprocketColdWarExpansionPack-v0.1.0.zip — FULL PACK (recommended):** includes the Cold War Core, Keybinds API and all seven gameplay plugins. You do not need the separate Core ZIP or a separate API download.
+- **SprocketColdWarCore-v0.1.3.zip — CORE ONLY:** enables the Cold War era and provides its cannon/engine Technology definitions. It does not include Shell Selector, Material Selector, smoke, sights, suspension, autoloaders or the Keybinds API. Choose this only if you want to install individual plugins yourself, following their dependency requirements.
+
+The pack version is 0.1.0; its included Core module has its own version, 0.1.3. These are separate version numbers, not competing downloads. **Neither ZIP includes the mod loader.**
+
+
+
 **Required dependency: [Sprocket Keybinds API 0.1.5](https://github.com/RoanWassink/SprocketKeybinds/releases/tag/v0.1.5). Hydropneumatic, Telescopic Mast, Thermal Sight and Smoke Launchers will not load without it. The full pack includes it: keep its DLL installed. For separate plugin downloads, install the API ZIP once, merging its BepInEx folder into your game folder.**
 
 Take your designs into Cold War! This **v0.1.0 beta** brings the tested combination of advanced shells, reactive/composite armour, thermal sights, telescopic masts, hydropneumatic suspension, carousel/bustle autoloaders and smoke launchers into one download.
