@@ -1,5 +1,10 @@
 # Sprocket Cold War Expansion Pack
 
+**[Download the FULL PACK — v0.1.0 beta](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/download/v0.1.0/SprocketColdWarExpansionPack-v0.1.0.zip)** · [Release page and all files](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/tag/v0.1.0)
+
+Includes Core, Keybinds API and all gameplay plugins. **Download this one ZIP for the complete pack.** Install the mod loader separately first. Use the release ZIP rather than GitHub’s Code > Download ZIP, which contains source code.
+
+
 
 ## Which ZIP should I download?
 
