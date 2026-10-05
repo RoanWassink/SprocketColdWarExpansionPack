@@ -1,5 +1,7 @@
 # Sprocket Cold War Expansion Pack
 
+**Required dependency: [Sprocket Keybinds API 0.1.5](https://github.com/RoanWassink/SprocketKeybinds/releases/tag/v0.1.5). Hydropneumatic, Telescopic Mast, Thermal Sight and Smoke Launchers will not load without it. The full pack includes it: keep its DLL installed. For separate plugin downloads, install the API ZIP once, merging its BepInEx folder into your game folder.**
+
 Build beyond WWII with **guided missiles, APFSDS, reactive/composite armour, thermal sights, telescopic masts, adjustable suspension, autoloaders and tri-smoke launchers** in one coordinated download.
 
 **v0.1.0 beta.** The creator tested the combined pack and reports it working. Armour performance remains a bounded gameplay approximation; this is not a historical simulator or a guarantee against every shell. The loader is a separate prerequisite.
