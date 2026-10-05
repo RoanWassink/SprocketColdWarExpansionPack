@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 1,
+  "name": "SprocketColdWarExpansionPack",
+  "version": "0.1.0",
+  "status": "public-beta-user-tested",
+  "gameVersion": "0.2.55.5",
+  "unityVersion": "6000.3.21f1",
+  "bepinexVersion": "6.0.0-be.788",
+  "gameAssemblySha256": "18A9A15B5E5F11898ED4DC34FC3E2D4C12950C3B37AC1FA499E8B00592DEDD56",
+  "technologyHorizon": "1991.12.31",
+  "modules": [
+    {
+      "file": "BepInEx/plugins/SprocketCarouselAutoloader.dll",
+      "guid": "nl.roan.sprocket.carousel",
+      "name": "Sprocket Carousel Autoloader",
+      "version": "0.2.11",
+      "sha256": "331B3E170FA26B071B5568B17D0E43CD211B6EEF4D9F787C26C0AECF8571FBFD"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketMaterialSelector.dll",
+      "guid": "nl.roan.sprocket.materialselector",
+      "name": "Sprocket Material Selector",
+      "version": "0.4.4",
+      "sha256": "CF8A78020360C2DF8EFF99A6B76364BFD8DCCBDBF231405AE0709EAEBCA1F69B"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketShellSelector.dll",
+      "guid": "nl.roan.sprocket.shellselector",
+      "name": "Sprocket Shell Selector",
+      "version": "0.12.3-heavyera.1",
+      "sha256": "C358CED0EF20E5AAC96316DB85755DDC7750C143444B7DC644DA35C48AB9FA59"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
+      "guid": "nl.roan.sprocket.coldwarexpansionpack",
+      "name": "Sprocket Cold War Expansion Pack",
+      "version": "0.1.3",
+      "sha256": "082B1023D27E12A79686CA3BB521A48F9392E8A74A80262AE7D3420B2B16ADF6"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketHydropneumatic/SprocketHydropneumatic.dll",
+      "guid": "nl.roan.sprocket.hydropneumatic",
+      "name": "Sprocket Hydropneumatic",
+      "version": "0.4.2",
+      "sha256": "3CDD1A3BF0DA03E7A0979086D87FFA0E598D79BDF2CC0A852ED44C6CEB64B3BA"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketTelescopicMast/SprocketTelescopicMast.dll",
+      "guid": "nl.roan.sprocket.telescopicmast",
+      "name": "Sprocket Telescopic Mast",
+      "version": "0.3.8",
+      "sha256": "1DB7454E44F1FC6F8FCCBA539A1B0D72CB9851CE8A10AED80DB931918801EFBB"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketKeybinds/SprocketKeybinds.dll",
+      "guid": "nl.roan.sprocket.keybinds",
+      "name": "SprocketKeybinds",
+      "version": "0.1.5",
+      "sha256": "BA64393739A7B4C037216D7C792EA7BE688334FDC42DA3EE49F983CE808CDC52"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketThermalSight/SprocketThermalSight.dll",
+      "guid": "nl.roan.sprocket.thermalsight",
+      "name": "SprocketThermalSight",
+      "version": "0.2.4",
+      "sha256": "BB42FCF3C99F4B8581C330E3776E4630AB508CEBFB153F50367E7727FBD60733"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketSmokeLaunchers/SprocketSmokeLaunchers.dll",
+      "guid": "sprocket.smokelaunchers",
+      "name": "Sprocket Smoke Launchers",
+      "version": "0.2.4",
+      "sha256": "E5867FA800CF3CBF22EC333EEE501E19903C608ED8FE646D235856555052B10A"
+    }
+  ],
+  "files": [
+    {
+      "path": "BepInEx/config/nl.roan.sprocket.coldwarexpansionpack.cfg",
+      "sha256": "267C204589AA9C3FA3B2AC63C22317FB8F05D6352B1D9536ECC6FFD6357A4185",
+      "bytes": 26
+    },
+    {
+      "path": "BepInEx/config/nl.roan.sprocket.hydropneumatic.cfg",
+      "sha256": "5E4362FE9E972AC744A3784DD6C57ADAB9976B39288687E5F09E05E008190531",
+      "bytes": 125
+    },
+    {
+      "path": "BepInEx/config/nl.roan.sprocket.materialselector.cfg",
+      "sha256": "73211704D22881DE00668C42A8220D045A89986F51B2CCD93B8F4740C0BB407E",
+      "bytes": 42
+    },
+    {
+      "path": "BepInEx/config/nl.roan.sprocket.shellselector.cfg",
+      "sha256": "F3B8D5569FFE4682131157FB83F3D5E3CE9C28F09AD225F02192A4090E191F75",
+      "bytes": 159
+    },
+    {
+      "path": "BepInEx/config/nl.roan.sprocket.telescopicmast.cfg",
+      "sha256": "9E16382D3DB6E4C3D71BC207C8EC953364EBAD48E2BA29B20C3C16C4E0A58BF5",
+      "bytes": 161
+    },
+    {
+      "path": "BepInEx/config/sprocket.armour.responses.json",
+      "sha256": "1822C14A0D8F9F2044A82FCC59A55749ECDAA2F225E002229C92D963326EECB0",
+      "bytes": 7104
+    },
+    {
+      "path": "BepInEx/config/sprocket.shellselector.shells.json",
+      "sha256": "6CB174B83973AA89EAE23A97D3952084F4A99B7E8181F2CFBEC2C7DD84497CE7",
+      "bytes": 6159
+    },
+    {
+      "path": "BepInEx/config/sprocket.shellselector.spall.json",
+      "sha256": "430A785E4B00BEBCEF9F8537CDE659EFE052F2D661D5144884BC118FF9DE96AA",
+      "bytes": 585
+    },
+    {
+      "path": "BepInEx/plugins/SprocketCarouselAutoloader.dll",
+      "sha256": "331B3E170FA26B071B5568B17D0E43CD211B6EEF4D9F787C26C0AECF8571FBFD",
+      "bytes": 3878400
+    },
+    {
+      "path": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
+      "sha256": "082B1023D27E12A79686CA3BB521A48F9392E8A74A80262AE7D3420B2B16ADF6",
+      "bytes": 13312
+    },
+    {
+      "path": "BepInEx/plugins/SprocketHydropneumatic/assets/hydropneumatic-icon.png",
+      "sha256": "73A639C2CE1C1AA5D5E7FD2BDB4AEA10E20DEA4C69E3472D099BC64BB14B7993",
+      "bytes": 1070219
+    },
+    {
+      "path": "BepInEx/plugins/SprocketHydropneumatic/SprocketHydropneumatic.dll",
+      "sha256": "3CDD1A3BF0DA03E7A0979086D87FFA0E598D79BDF2CC0A852ED44C6CEB64B3BA",
+      "bytes": 61952
+    },
+    {
+      "path": "BepInEx/plugins/SprocketKeybinds/SprocketKeybinds.dll",
+      "sha256": "BA64393739A7B4C037216D7C792EA7BE688334FDC42DA3EE49F983CE808CDC52",
+      "bytes": 59392
+    },
+    {
+      "path": "BepInEx/plugins/SprocketMaterialSelector.dll",
+      "sha256": "CF8A78020360C2DF8EFF99A6B76364BFD8DCCBDBF231405AE0709EAEBCA1F69B",
+      "bytes": 65536
+    },
+    {
+      "path": "BepInEx/plugins/SprocketShellSelector.dll",
+      "sha256": "C358CED0EF20E5AAC96316DB85755DDC7750C143444B7DC644DA35C48AB9FA59",
+      "bytes": 647680
+    },
+    {
+      "path": "BepInEx/plugins/SprocketSmokeLaunchers/MODULE-FACTS.json",
+      "sha256": "4963B2A2CD96474F75177569A062BCE6F2D913F1D46180984D5FAC7BFCA80FCC",
+      "bytes": 3488
+    },
+    {
+      "path": "BepInEx/plugins/SprocketSmokeLaunchers/SprocketSmokeLaunchers.dll",
+      "sha256": "E5867FA800CF3CBF22EC333EEE501E19903C608ED8FE646D235856555052B10A",
+      "bytes": 38400
+    },
+    {
+      "path": "BepInEx/plugins/SprocketTelescopicMast/assets/telescope-base-icon.png",
+      "sha256": "BC4C70464559F99009D66795903CFA2ED91B37705C7963C2CA1A4DBFA728F2DF",
+      "bytes": 439851
+    },
+    {
+      "path": "BepInEx/plugins/SprocketTelescopicMast/assets/telescope-part-icon.png",
+      "sha256": "55F10E984A9C5F84E3AEA3465D6081297AB6772E96545CCC8FE1B8A1077F1F68",
+      "bytes": 500500
+    },
+    {
+      "path": "BepInEx/plugins/SprocketTelescopicMast/SprocketTelescopicMast.dll",
+      "sha256": "1DB7454E44F1FC6F8FCCBA539A1B0D72CB9851CE8A10AED80DB931918801EFBB",
+      "bytes": 32256
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-sight-icon.png",
+      "sha256": "BADE8BB0F7615430FF8064F7656C154DAB44768AC2BBEFC732BE5A66C6848980",
+      "bytes": 1365790
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/SprocketThermalSight.dll",
+      "sha256": "BB42FCF3C99F4B8581C330E3776E4630AB508CEBFB153F50367E7727FBD60733",
+      "bytes": 56832
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/thermal-models.json",
+      "sha256": "16C719BDC010B9A313AB005965716BF4E765BD72A951EB0D31D91BB866FFC1D9",
+      "bytes": 3810
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/hydropneumaticSuspension.xml",
+      "sha256": "4F6380790F9D12C6CCC613E8F8392AA5C9F7730D7861DE9CBE4201DE45FE07FF",
+      "bytes": 990
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/smokeLauncherBank.xml",
+      "sha256": "2FB20EF262C5A65CFC8E99C85D6C812BDC093AA84E54D87C03D22AC2B67023B2",
+      "bytes": 1306
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopeBase.xml",
+      "sha256": "B22B8D673DF0F19C1A9F5FDB290BF217036A65DE379D6B248C67F923EC2C44EA",
+      "bytes": 884
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopePart.xml",
+      "sha256": "F5F604731CD22B043BD4146BEEADE7AC9064CF32EF44CD1DEE03CBEB297B549E",
+      "bytes": 998
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopicSightMast.xml",
+      "sha256": "EC45AB0D5D1380EBFAC8EF61046A9EECDDDB0D74EC93D015BB1400373C7FC54F",
+      "bytes": 1366
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSight.xml",
+      "sha256": "4CB9624605B410082D15E8033B1F9F65D33E939147411866822F93D71376BFCE",
+      "bytes": 632
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightMk3BlackHot.xml",
+      "sha256": "C25BA1A1ABF27076D5A6AEC557BBE4AB2DCB997EB187726752FC6638DF2929A3",
+      "bytes": 690
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightMk3WhiteHot.xml",
+      "sha256": "6CA02C76E61331DB8402C766FD0C90A1F3FB21015D1C8CF8B4854929B2392DC7",
+      "bytes": 690
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightModel1.xml",
+      "sha256": "2CC4B66B9C5E27FCC918C9CAD3272FA9A82A13DD6F4F6CC064A6F5A9FEB4A05B",
+      "bytes": 714
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightModel2.xml",
+      "sha256": "45881C35BB8968351E75BEDF4DD0F7830664E9D7B34695DB1F826B2B4EBA65BF",
+      "bytes": 714
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightModel3.xml",
+      "sha256": "83EC0E5F4AB57EB202469F84F209213E86CB9B8761FD89A93C978397EB664970",
+      "bytes": 716
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/hydropneumaticSuspensionPart.json",
+      "sha256": "270539B5A7138E32CE1EA5844982D5F61895EAEC4761C2BC9047041AC71F7F22",
+      "bytes": 4673
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/roanBustleAutoloaderPart.json",
+      "sha256": "29D397DC1ADDD05C86E45D954A4B40C44D26DF225EE3EFB91F83E6BB155BE51D",
+      "bytes": 1626
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/smokeLauncherBankPart.json",
+      "sha256": "454005A0430BD721FBD601B102B35DBBB425C2778A3F8B08F36985CE691282F9",
+      "bytes": 1303
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/telescopeBasePart.json",
+      "sha256": "D7F8B2B9D33DE5FBFEF29B3C7704B2AC16587605745E1348A22466F18D38251A",
+      "bytes": 1307
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/telescopePartPart.json",
+      "sha256": "06EA1EF99E69D225C305FEE6FE9DE7B13321DB6B4678D74D363C0C50AB644D25",
+      "bytes": 1308
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/telescopicSightMastPart.json",
+      "sha256": "B709A34C835B08A41D31CACDCF8D8B58005BBC4BCFD9607891522BF20C960E34",
+      "bytes": 2212
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightMk3BlackHotPart.json",
+      "sha256": "276E47F623C714E08A299C5250CA18DDFF5FA550A4240F88023FEB540D6C7B3D",
+      "bytes": 1485
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightMk3WhiteHotPart.json",
+      "sha256": "D33F983BBE46AF808695F702F9542D32DE0C88B9B98A13B164A5C5CC8B240EA8",
+      "bytes": 1485
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel1Part.json",
+      "sha256": "334594B838FC855D81A53F2F7424C4D9B44D964E1A32E6FC2A6AEDED5E313BB9",
+      "bytes": 1475
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel2Part.json",
+      "sha256": "69C1BBF461F1AFD3C2659CDA27FE76F1B5B7053AC9EF3F07E61D5C5EA5B0A9B4",
+      "bytes": 1475
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel3Part.json",
+      "sha256": "B5C0680D9EAE431B093444E5E4072C4BDFDB2454B8B70DB0D47C142D6211DF71",
+      "bytes": 1475
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightPart.json",
+      "sha256": "92BBA3D7F42AE11518AC49EA6429CB5B0B38D9C2BBE952C3F92E462236887DE2",
+      "bytes": 1463
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/AdvancedArmourSteel.json",
+      "sha256": "C6FBE2BDA871D65EA23CD59927DF020221E4DD072408F7650D310D204D57198A",
+      "bytes": 216
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/AluminiumArmour.json",
+      "sha256": "01A4C8658362E5EBDC084AEF24E3EF7B1209A66D76653EA5072045B0B7CD4F22",
+      "bytes": 212
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/AramidSpallLiner.json",
+      "sha256": "B211228D43D68C647F2765CEB8E711B418BCE7F61CAE975BEAF7429DD33CA35F",
+      "bytes": 208
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/CastArmour.json",
+      "sha256": "54987ABC9FD2E27CAC755AC89EA43CC000605EAEB6024ECDCB88113056911CC6",
+      "bytes": 209
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/CeramicArray.json",
+      "sha256": "8E883F016434BD9E1F55D13389E0D581AB5CD42AE1708A2381C87F634FD79D7A",
+      "bytes": 210
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/CWEP_Cannon.json",
+      "sha256": "404C3D2EBA2C6B5A7245F097811CD6808223AB27E29C1F8F6CDD87D4143EA516",
+      "bytes": 260
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/CWEP_Engine.json",
+      "sha256": "CA5DF98EE2E0FD046AF5C441336F75D56C1843D6C41A070463A6A4E2DDCD1C2B",
+      "bytes": 176
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ElastomerNERA.json",
+      "sha256": "91B9D35AE8784D054CAFA816BBB4AFCDC34CBE64BB4BF674D2B1E4E153794F1E",
+      "bytes": 207
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/glassTextolite.json",
+      "sha256": "6540E10B329DC92BD61523D5F9BD0B8244D9460AE90B211C2168F43E01EF67E3",
+      "bytes": 212
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/HeavyAlloyInsert.json",
+      "sha256": "8167F23CF01A64233F996C953CF35C166FEF01B9CEA24D631E55EFB2E1D4FC19",
+      "bytes": 214
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/heavyEraCassette.json",
+      "sha256": "897AC72FC8F2528E709FA3868C686CF609905AA919D34F8C7BD3EED4C0C20DA9",
+      "bytes": 218
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/HighHardnessSteel.json",
+      "sha256": "6321F5537C9EEC653B7ADA6A5BC074816FC1BB7062C40FDBD89D663858D9B577",
+      "bytes": 215
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/lightEraCassette.json",
+      "sha256": "61BF1FFEB02935FBCBF424B8BD27DABCE94E506140E7E4B2247315AF3415A3E8",
+      "bytes": 218
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/MagnesiumAlloy.json",
+      "sha256": "2A438B532F97250CBA12BC4688E0C7321B8A9A75F9F58C712EE4A7774692BD65",
+      "bytes": 209
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/neraCassette.json",
+      "sha256": "4424B0235DB1FCB551F321710E083AC42E9158A4C0CFA7DC61C6DED8CBE22A17",
+      "bytes": 217
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/passiveComposite.json",
+      "sha256": "9A883EB02D462FFB2683E64FB69980F81E82158585336EC5108FA47C38328E32",
+      "bytes": 214
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/StructuralSteel.json",
+      "sha256": "DA037306A418BB43BB9D0D51662814697A10398A042ABE2A497F94A744810913",
+      "bytes": 212
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/TitaniumArmour.json",
+      "sha256": "7CE59F2FD808166DFB8AFBE66B0B889784B0B67E20B8F982386D2B16018376A6",
+      "bytes": 211
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/smokeLauncherBankPart.json",
+    "field": "date",
+    "original": "1960.01.01",
+    "packValue": "1945.09.03",
+    "reason": "Whole Cold War repertoire available at native Cold War start; historical date retained as provenance"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Technology/glassTextolite.json",
+    "field": "date",
+    "original": "1945.09.03",
+    "packValue": "1945.09.03",
+    "reason": "Whole Cold War repertoire available at native Cold War start; historical date retained as provenance"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Technology/lightEraCassette.json",
+    "field": "date",
+    "original": "1945.09.03",
+    "packValue": "1945.09.03",
+    "reason": "Whole Cold War repertoire available at native Cold War start; historical date retained as provenance"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Technology/neraCassette.json",
+    "field": "date",
+    "original": "1945.09.03",
+    "packValue": "1945.09.03",
+    "reason": "Whole Cold War repertoire available at native Cold War start; historical date retained as provenance"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Technology/passiveComposite.json",
+    "field": "date",
+    "original": "1945.09.03",
+    "packValue": "1945.09.03",
+    "reason": "Whole Cold War repertoire available at native Cold War start; historical date retained as provenance"
+  },
+  {
+    "path": "BepInEx/config/sprocket.armour.responses.json",
+    "field": "enabled",
+    "original": false,
+    "packValue": true,
+    "reason": "Explicit opt-in combined test only; canonical standalone catalogue remains disabled"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightMk3BlackHotPart.json",
+    "field": "date",
+    "original": null,
+    "packValue": "1945.09.03",
+    "reason": "Cold War-only thermal parts; full-era pack policy, not historical generation introduction date"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightMk3WhiteHotPart.json",
+    "field": "date",
+    "original": null,
+    "packValue": "1945.09.03",
+    "reason": "Cold War-only thermal parts; full-era pack policy, not historical generation introduction date"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel1Part.json",
+    "field": "date",
+    "original": null,
+    "packValue": "1945.09.03",
+    "reason": "Cold War-only thermal parts; full-era pack policy, not historical generation introduction date"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel2Part.json",
+    "field": "date",
+    "original": null,
+    "packValue": "1945.09.03",
+    "reason": "Cold War-only thermal parts; full-era pack policy, not historical generation introduction date"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel3Part.json",
+    "field": "date",
+    "original": null,
+    "packValue": "1945.09.03",
+    "reason": "Cold War-only thermal parts; full-era pack policy, not historical generation introduction date"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightPart.json",
+    "field": "date",
+    "original": null,
+    "packValue": "1945.09.03",
+    "reason": "Cold War-only thermal parts; full-era pack policy, not historical generation introduction date"
+  },
+  {
+    "path": "Sprocket_Data/StreamingAssets/Technology/heavyEraCassette.json",
+    "field": "date",
+    "original": "1945.09.03",
+    "packValue": "1945.09.03",
+    "reason": "Producer already uses full ColdWar availability; historicalDate1985 context is not a verified introduction date"
+  }
+]
