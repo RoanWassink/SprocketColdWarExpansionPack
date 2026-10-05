@@ -2,13 +2,18 @@
 
 Take your designs into Cold War! This **v0.1.0 beta** brings the tested combination of advanced shells, reactive/composite armour, thermal sights, telescopic masts, hydropneumatic suspension, carousel/bustle autoloaders and smoke launchers into one download.
 
-## What changes for you
+## What’s included
 
-- Select Cold War to access advanced shells/materials. WWII stock HEAT is recalibrated; custom profiles and saved bindings are preserved.
-- Fit NERA, light ERA or heavier Kontakt-5-inspired ERA, with finite shared HEAT/APFSDS cells and clear weight/cost tradeoffs. Protection is a gameplay approximation, not exact historical performance.
-- Fire three smoke grenades per bank, with louder launch and individual ignition sounds. A new Play session reloads the banks. Smoke is visual only: it does not block AI or thermal vision.
-- Rebind Hydro, Mast, Thermal and Smoke in one author/pack-grouped Mod keybinds menu. The shared API is included once.
-- Thermal is restricted to Cold War, retains per-sight profiles, and includes the rendering repair. Bustle loading uses the updated Howden recording.
+- **Advanced ammunition:** select Cold War to access APFSDS and guided missiles, alongside ammunition suited to earlier eras.
+- **Composite and reactive armour:** build with NERA, light ERA or heavier Kontakt-5-inspired ERA. NERA offers reusable protection against HEAT; ERA has one-use cells, with heavy ERA also offering angle-dependent protection against APFSDS. Weight, cost and passive protection still matter after an ERA cell is spent.
+- **Smoke launchers:** deploy three grenades per bank to form a smoke screen, complete with launch and individual ignition sounds. Each bank has one salvo per Play session; starting a new session reloads it. Smoke is visual only: it does not block AI or thermal vision.
+- **Hydropneumatic suspension:** raise or lower your hull and lean forward or backward while driving, with optional independent front/rear controls.
+- **Telescopic masts:** raise and lower attached sights or equipment on an extendable mast.
+- **Thermal sights:** choose a monochrome profile for each sight and save it with your vehicle. Thermal sights are available in Cold War.
+- **Carousel and bustle autoloaders:** fit an automatic loading system with finite ammunition, capacity determined by your design, and mechanical loading audio.
+- **Shared keybinds:** configure suspension, mast, thermal and smoke controls in one Mod keybinds menu, grouped by author or pack. The required keybind API is included.
+
+**This is a beta.** Back up your vehicle saves before experimenting. Armour protection is a gameplay approximation, not a promise of exact historical performance. The pack makes its advanced equipment available throughout Cold War rather than reproducing each item’s historical introduction date.
 
 ## Install/update
 
