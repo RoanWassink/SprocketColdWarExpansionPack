@@ -2,46 +2,39 @@ namespace SprocketColdWarExpansionPack;
 
 public static class ColdWarRules
 {
-    public const string NativeEraStart = "1945.09.03";
-    public const string TechnologyHorizon = "1991.12.31";
-    public const float EngineTechnologyFactor = 2.25f;
-    public const float EngineTorqueCoefficient = 1.15f;
-    public const float EngineCostMultiplier = 1.60f;
-    public static readonly DateTime ModernStart = new(1945, 9, 3);
-    public static readonly DateTime Horizon = new(1991, 12, 31);
-    public static int ConfirmLastModernEra(ReadOnlySpan<DateTime> starts)
+    // Native TechDate supports year zero. System.DateTime does not.
+    public static int CalendarKey(int year, int month, int day)
+    {
+        if (year < 0 || year > 9999 || month < 1 || month > 12 || day < 1 ||
+            day > DateTime.DaysInMonth(year == 0 ? 400 : year, month)) return -1;
+        return year * 10000 + month * 100 + day;
+    }
+    public static int ConfirmLastEra(ReadOnlySpan<int> starts)
     {
         if (starts.IsEmpty) return -1;
         for (var i = 0; i < starts.Length; i++)
-            if (starts[i].Date == DateTime.MaxValue.Date || (i > 0 && starts[i].Date <= starts[i - 1].Date)) return -1;
-        return starts[^1].Date >= ModernStart ? starts.Length - 1 : -1;
+            if (starts[i] < 0 || starts[i] >= 99991231 ||
+                (i > 0 && starts[i] <= starts[i - 1])) return -1;
+        return starts.Length - 1;
     }
-    public static DateTime ResolveTechnologyDate(DateTime date, ReadOnlySpan<DateTime> starts)
+    public static bool RecognizeLastEraSentinel(bool enabled, bool isExactMaximumDate,
+        int requestedIndex, ReadOnlySpan<int> starts)
     {
-        date = date.Date;
-        if (date == DateTime.MaxValue.Date)
-        {
-            var last = ConfirmLastModernEra(starts);
-            return last < 0 ? date : (starts[last].Date > Horizon ? starts[last].Date : Horizon);
-        }
-        return date >= ModernStart && date < Horizon ? Horizon : date;
+        var last = ConfirmLastEra(starts);
+        return enabled && isExactMaximumDate && last >= 0 && requestedIndex == last;
     }
-    public static bool RecognizeLastEraSentinel(bool enabled, bool isExactMaximumDate, int requestedIndex, int confirmedLastColdWarIndex) =>
-        enabled && isExactMaximumDate && confirmedLastColdWarIndex >= 0 && requestedIndex == confirmedLastColdWarIndex;
-    public static bool IsColdWarEngine(float factor, float torque) =>
-        float.IsFinite(factor) && float.IsFinite(torque) &&
-        Math.Abs(factor - EngineTechnologyFactor) < .0001f && Math.Abs(torque - EngineTorqueCoefficient) < .0001f;
-    public static float EnginePrice(float vanillaPrice, float factor, float torque) =>
-        IsColdWarEngine(factor, torque) && float.IsFinite(vanillaPrice) && vanillaPrice >= 0
-            ? vanillaPrice * EngineCostMultiplier : vanillaPrice;
-    // Reference calculation from the verified native binary, not a replacement hook.
-    // Cylinder volume is litres; the game truncates the result to UInt16.
-    public static ushort ReferenceMaxRpm(double cylinderLitres, double technologyFactor)
+    public static int ConfirmLastEra(ReadOnlySpan<DateTime> starts)
     {
-        if (!double.IsFinite(cylinderLitres) || cylinderLitres <= 0 || !double.IsFinite(technologyFactor) || technologyFactor < 0)
-            throw new ArgumentOutOfRangeException(nameof(cylinderLitres));
-        var rpm = (1200 + 2200 * Math.Sqrt(technologyFactor)) / Math.Pow(cylinderLitres / 3, .3);
-        if (!double.IsFinite(rpm) || rpm > ushort.MaxValue) throw new ArgumentOutOfRangeException(nameof(cylinderLitres));
-        return (ushort)rpm;
+        if (starts.IsEmpty) return -1;
+        for (var i = 0; i < starts.Length; i++)
+            if (starts[i].Date == DateTime.MaxValue.Date ||
+                (i > 0 && starts[i].Date <= starts[i - 1].Date)) return -1;
+        return starts.Length - 1;
+    }
+    public static bool RecognizeLastEraSentinel(bool enabled, bool isExactMaximumDate,
+        int requestedIndex, ReadOnlySpan<DateTime> starts)
+    {
+        var last = ConfirmLastEra(starts);
+        return enabled && isExactMaximumDate && last >= 0 && requestedIndex == last;
     }
 }

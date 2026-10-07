@@ -1,41 +1,40 @@
 {
   "schemaVersion": 1,
   "name": "SprocketColdWarExpansionPack",
-  "version": "0.1.1",
-  "status": "public-beta-era-fix-native-heavy-era-tested-custom-era-pending",
+  "version": "0.2.0",
+  "status": "beta",
   "gameVersion": "0.2.55.5",
   "unityVersion": "6000.3.21f1",
   "bepinexVersion": "6.0.0-be.788",
   "gameAssemblySha256": "18A9A15B5E5F11898ED4DC34FC3E2D4C12950C3B37AC1FA499E8B00592DEDD56",
-  "technologyHorizon": "1991.12.31",
   "modules": [
     {
       "file": "BepInEx/plugins/SprocketCarouselAutoloader.dll",
-      "guid": "nl.roan.sprocket.carousel",
+      "guid": "sprocket.carousel",
       "name": "Sprocket Carousel Autoloader",
-      "version": "0.2.11",
-      "sha256": "331B3E170FA26B071B5568B17D0E43CD211B6EEF4D9F787C26C0AECF8571FBFD"
+      "version": "0.2.12",
+      "sha256": "79007BA52CB32BB76559D6C864F1F3AB36AC28426815A02F13811F512C98F55A"
     },
     {
       "file": "BepInEx/plugins/SprocketMaterialSelector.dll",
-      "guid": "nl.roan.sprocket.materialselector",
+      "guid": "sprocket.materialselector",
       "name": "Sprocket Material Selector",
-      "version": "0.4.5",
-      "sha256": "B40FE4E4141C3653F5B6BCBA282DE3F9C5C970B8F9A62C42F2E4D756BEE3F655"
+      "version": "0.4.8",
+      "sha256": "2A29F572853C68E8044999F4EA2808A1E89ABA9D0E21601CD257F42FE049C810"
     },
     {
       "file": "BepInEx/plugins/SprocketShellSelector.dll",
-      "guid": "nl.roan.sprocket.shellselector",
+      "guid": "sprocket.shellselector",
       "name": "Sprocket Shell Selector",
-      "version": "0.12.4",
-      "sha256": "CC82E9396C6D8DF7AD730737A8D6D7F906060D2EFDF81684F2F1ED8E89AE5B97"
+      "version": "0.12.5",
+      "sha256": "6BC177182EF658845E3B707C9B363725B3123A2459C8066260F308F006535782"
     },
     {
       "file": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
-      "guid": "nl.roan.sprocket.coldwarexpansionpack",
+      "guid": "sprocket.coldwarexpansionpack",
       "name": "Sprocket Cold War Expansion Pack",
-      "version": "0.1.4",
-      "sha256": "04EF808C69CCAE136826D659ABBD716E0551568EAB09E6F8C1F7E5BDC751E46B"
+      "version": "0.2.0",
+      "sha256": "81653484DF7036AEBB248B2401D1DD18485AB98AF43743D70071712E5657475A"
     },
     {
       "file": "BepInEx/plugins/SprocketHydropneumatic/SprocketHydropneumatic.dll",
@@ -48,352 +47,864 @@
       "file": "BepInEx/plugins/SprocketTelescopicMast/SprocketTelescopicMast.dll",
       "guid": "nl.roan.sprocket.telescopicmast",
       "name": "Sprocket Telescopic Mast",
-      "version": "0.3.8",
+      "version": "0.3.8-postwar.1",
       "sha256": "1DB7454E44F1FC6F8FCCBA539A1B0D72CB9851CE8A10AED80DB931918801EFBB"
     },
     {
       "file": "BepInEx/plugins/SprocketKeybinds/SprocketKeybinds.dll",
       "guid": "nl.roan.sprocket.keybinds",
       "name": "SprocketKeybinds",
-      "version": "0.1.5",
-      "sha256": "BA64393739A7B4C037216D7C792EA7BE688334FDC42DA3EE49F983CE808CDC52"
+      "version": "0.1.6",
+      "sha256": "B8A9A00DC127901B1E93F70D60EC9A46CC1A2AE1952E1E28D779085DE32E38BC"
     },
     {
       "file": "BepInEx/plugins/SprocketThermalSight/SprocketThermalSight.dll",
-      "guid": "nl.roan.sprocket.thermalsight",
+      "guid": "sprocket.thermalsight",
       "name": "SprocketThermalSight",
-      "version": "0.2.5",
-      "sha256": "8419668564F873909DC196358CD9C95E55C657C388F30E4EC3E08646AD1EB1C7"
+      "version": "0.2.6",
+      "sha256": "A70A30B75DCBF39707BF7130DDA13649B289BC71CC4438B1DFE11877CAAEB98E"
     },
     {
       "file": "BepInEx/plugins/SprocketSmokeLaunchers/SprocketSmokeLaunchers.dll",
       "guid": "sprocket.smokelaunchers",
       "name": "Sprocket Smoke Launchers",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "sha256": "E5867FA800CF3CBF22EC333EEE501E19903C608ED8FE646D235856555052B10A"
+    },
+    {
+      "file": "BepInEx/plugins/SprocketStabilization.dll",
+      "guid": "sprocket.stabilization",
+      "name": "SprocketStabilization",
+      "version": "0.1.0",
+      "sha256": "7C1F6F759A4E2220B1902A4428C3B9D4D9B2D724B7E9B2EC187CAB9AB5F05A5A"
     }
   ],
   "files": [
     {
-      "path": "BepInEx/config/nl.roan.sprocket.coldwarexpansionpack.cfg",
-      "sha256": "267C204589AA9C3FA3B2AC63C22317FB8F05D6352B1D9536ECC6FFD6357A4185",
-      "bytes": 26
-    },
-    {
-      "path": "BepInEx/config/nl.roan.sprocket.hydropneumatic.cfg",
-      "sha256": "5E4362FE9E972AC744A3784DD6C57ADAB9976B39288687E5F09E05E008190531",
-      "bytes": 125
-    },
-    {
-      "path": "BepInEx/config/nl.roan.sprocket.materialselector.cfg",
-      "sha256": "73211704D22881DE00668C42A8220D045A89986F51B2CCD93B8F4740C0BB407E",
-      "bytes": 42
-    },
-    {
-      "path": "BepInEx/config/nl.roan.sprocket.shellselector.cfg",
-      "sha256": "F3B8D5569FFE4682131157FB83F3D5E3CE9C28F09AD225F02192A4090E191F75",
-      "bytes": 159
-    },
-    {
-      "path": "BepInEx/config/nl.roan.sprocket.telescopicmast.cfg",
-      "sha256": "9E16382D3DB6E4C3D71BC207C8EC953364EBAD48E2BA29B20C3C16C4E0A58BF5",
-      "bytes": 161
-    },
-    {
       "path": "BepInEx/config/sprocket.armour.responses.json",
       "sha256": "1822C14A0D8F9F2044A82FCC59A55749ECDAA2F225E002229C92D963326EECB0",
-      "bytes": 7104
+      "bytes": 7104,
+      "previousDefaultHashes": [
+        "1822C14A0D8F9F2044A82FCC59A55749ECDAA2F225E002229C92D963326EECB0"
+      ]
+    },
+    {
+      "path": "BepInEx/config/sprocket.shellselector.cfg",
+      "sha256": "A3185EE579AE654140EB650869C566832D3A66AA0CEDBBE73D9AFE3809DA92B7",
+      "bytes": 101,
+      "previousDefaultHashes": []
     },
     {
       "path": "BepInEx/config/sprocket.shellselector.shells.json",
       "sha256": "6CB174B83973AA89EAE23A97D3952084F4A99B7E8181F2CFBEC2C7DD84497CE7",
-      "bytes": 6159
+      "bytes": 6159,
+      "previousDefaultHashes": [
+        "6CB174B83973AA89EAE23A97D3952084F4A99B7E8181F2CFBEC2C7DD84497CE7"
+      ]
     },
     {
       "path": "BepInEx/config/sprocket.shellselector.spall.json",
       "sha256": "430A785E4B00BEBCEF9F8537CDE659EFE052F2D661D5144884BC118FF9DE96AA",
-      "bytes": 585
+      "bytes": 585,
+      "previousDefaultHashes": [
+        "430A785E4B00BEBCEF9F8537CDE659EFE052F2D661D5144884BC118FF9DE96AA"
+      ]
     },
     {
       "path": "BepInEx/plugins/SprocketCarouselAutoloader.dll",
-      "sha256": "331B3E170FA26B071B5568B17D0E43CD211B6EEF4D9F787C26C0AECF8571FBFD",
-      "bytes": 3878400
+      "sha256": "79007BA52CB32BB76559D6C864F1F3AB36AC28426815A02F13811F512C98F55A",
+      "bytes": 3879936,
+      "previousDefaultHashes": [
+        "331B3E170FA26B071B5568B17D0E43CD211B6EEF4D9F787C26C0AECF8571FBFD"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketMaterialSelector.dll",
+      "sha256": "2A29F572853C68E8044999F4EA2808A1E89ABA9D0E21601CD257F42FE049C810",
+      "bytes": 84992,
+      "previousDefaultHashes": [
+        "B40FE4E4141C3653F5B6BCBA282DE3F9C5C970B8F9A62C42F2E4D756BEE3F655"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketShellSelector.dll",
+      "sha256": "6BC177182EF658845E3B707C9B363725B3123A2459C8066260F308F006535782",
+      "bytes": 721408,
+      "previousDefaultHashes": [
+        "CC82E9396C6D8DF7AD730737A8D6D7F906060D2EFDF81684F2F1ED8E89AE5B97"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketStabilization.dll",
+      "sha256": "7C1F6F759A4E2220B1902A4428C3B9D4D9B2D724B7E9B2EC187CAB9AB5F05A5A",
+      "bytes": 23552,
+      "previousDefaultHashes": []
     },
     {
       "path": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
-      "sha256": "04EF808C69CCAE136826D659ABBD716E0551568EAB09E6F8C1F7E5BDC751E46B",
-      "bytes": 15872
-    },
-    {
-      "path": "BepInEx/plugins/SprocketHydropneumatic/assets/hydropneumatic-icon.png",
-      "sha256": "73A639C2CE1C1AA5D5E7FD2BDB4AEA10E20DEA4C69E3472D099BC64BB14B7993",
-      "bytes": 1070219
+      "sha256": "81653484DF7036AEBB248B2401D1DD18485AB98AF43743D70071712E5657475A",
+      "bytes": 11264,
+      "previousDefaultHashes": [
+        "04EF808C69CCAE136826D659ABBD716E0551568EAB09E6F8C1F7E5BDC751E46B"
+      ]
     },
     {
       "path": "BepInEx/plugins/SprocketHydropneumatic/SprocketHydropneumatic.dll",
       "sha256": "3CDD1A3BF0DA03E7A0979086D87FFA0E598D79BDF2CC0A852ED44C6CEB64B3BA",
-      "bytes": 61952
+      "bytes": 61952,
+      "previousDefaultHashes": [
+        "3CDD1A3BF0DA03E7A0979086D87FFA0E598D79BDF2CC0A852ED44C6CEB64B3BA"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketHydropneumatic/assets/hydropneumatic-icon.png",
+      "sha256": "73A639C2CE1C1AA5D5E7FD2BDB4AEA10E20DEA4C69E3472D099BC64BB14B7993",
+      "bytes": 1070219,
+      "previousDefaultHashes": [
+        "73A639C2CE1C1AA5D5E7FD2BDB4AEA10E20DEA4C69E3472D099BC64BB14B7993"
+      ]
     },
     {
       "path": "BepInEx/plugins/SprocketKeybinds/SprocketKeybinds.dll",
-      "sha256": "BA64393739A7B4C037216D7C792EA7BE688334FDC42DA3EE49F983CE808CDC52",
-      "bytes": 59392
+      "sha256": "B8A9A00DC127901B1E93F70D60EC9A46CC1A2AE1952E1E28D779085DE32E38BC",
+      "bytes": 62976,
+      "previousDefaultHashes": [
+        "BA64393739A7B4C037216D7C792EA7BE688334FDC42DA3EE49F983CE808CDC52"
+      ]
     },
     {
-      "path": "BepInEx/plugins/SprocketMaterialSelector.dll",
-      "sha256": "B40FE4E4141C3653F5B6BCBA282DE3F9C5C970B8F9A62C42F2E4D756BEE3F655",
-      "bytes": 67584
+      "path": "BepInEx/plugins/SprocketShellSelector.assets/atgm-ammo-box.png",
+      "sha256": "AD0BE4E88EE5935C8627B60B70639A67E80FA3C19F3D442D12D597DAB742BEBB",
+      "bytes": 869,
+      "previousDefaultHashes": []
     },
     {
-      "path": "BepInEx/plugins/SprocketShellSelector.dll",
-      "sha256": "CC82E9396C6D8DF7AD730737A8D6D7F906060D2EFDF81684F2F1ED8E89AE5B97",
-      "bytes": 648192
-    },
-    {
-      "path": "BepInEx/plugins/SprocketSmokeLaunchers/MODULE-FACTS.json",
-      "sha256": "4963B2A2CD96474F75177569A062BCE6F2D913F1D46180984D5FAC7BFCA80FCC",
-      "bytes": 3488
+      "path": "BepInEx/plugins/SprocketShellSelector.assets/atgm-launcher.png",
+      "sha256": "BA6205E2563C362E6C55D5B6B68A9B7930B3DDBEEC2DD7B4F32D620B29A41CC9",
+      "bytes": 1603,
+      "previousDefaultHashes": []
     },
     {
       "path": "BepInEx/plugins/SprocketSmokeLaunchers/SprocketSmokeLaunchers.dll",
       "sha256": "E5867FA800CF3CBF22EC333EEE501E19903C608ED8FE646D235856555052B10A",
-      "bytes": 38400
-    },
-    {
-      "path": "BepInEx/plugins/SprocketTelescopicMast/assets/telescope-base-icon.png",
-      "sha256": "BC4C70464559F99009D66795903CFA2ED91B37705C7963C2CA1A4DBFA728F2DF",
-      "bytes": 439851
-    },
-    {
-      "path": "BepInEx/plugins/SprocketTelescopicMast/assets/telescope-part-icon.png",
-      "sha256": "55F10E984A9C5F84E3AEA3465D6081297AB6772E96545CCC8FE1B8A1077F1F68",
-      "bytes": 500500
+      "bytes": 38400,
+      "previousDefaultHashes": [
+        "E5867FA800CF3CBF22EC333EEE501E19903C608ED8FE646D235856555052B10A"
+      ]
     },
     {
       "path": "BepInEx/plugins/SprocketTelescopicMast/SprocketTelescopicMast.dll",
       "sha256": "1DB7454E44F1FC6F8FCCBA539A1B0D72CB9851CE8A10AED80DB931918801EFBB",
-      "bytes": 32256
+      "bytes": 32256,
+      "previousDefaultHashes": [
+        "1DB7454E44F1FC6F8FCCBA539A1B0D72CB9851CE8A10AED80DB931918801EFBB"
+      ]
     },
     {
-      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-sight-icon.png",
-      "sha256": "BADE8BB0F7615430FF8064F7656C154DAB44768AC2BBEFC732BE5A66C6848980",
-      "bytes": 1365790
+      "path": "BepInEx/plugins/SprocketTelescopicMast/assets/telescope-base-icon.png",
+      "sha256": "BC4C70464559F99009D66795903CFA2ED91B37705C7963C2CA1A4DBFA728F2DF",
+      "bytes": 439851,
+      "previousDefaultHashes": [
+        "BC4C70464559F99009D66795903CFA2ED91B37705C7963C2CA1A4DBFA728F2DF"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketTelescopicMast/assets/telescope-part-icon.png",
+      "sha256": "55F10E984A9C5F84E3AEA3465D6081297AB6772E96545CCC8FE1B8A1077F1F68",
+      "bytes": 500500,
+      "previousDefaultHashes": [
+        "55F10E984A9C5F84E3AEA3465D6081297AB6772E96545CCC8FE1B8A1077F1F68"
+      ]
     },
     {
       "path": "BepInEx/plugins/SprocketThermalSight/SprocketThermalSight.dll",
-      "sha256": "8419668564F873909DC196358CD9C95E55C657C388F30E4EC3E08646AD1EB1C7",
-      "bytes": 57856
+      "sha256": "A70A30B75DCBF39707BF7130DDA13649B289BC71CC4438B1DFE11877CAAEB98E",
+      "bytes": 120832,
+      "previousDefaultHashes": [
+        "8419668564F873909DC196358CD9C95E55C657C388F30E4EC3E08646AD1EB1C7"
+      ]
     },
     {
       "path": "BepInEx/plugins/SprocketThermalSight/thermal-models.json",
       "sha256": "16C719BDC010B9A313AB005965716BF4E765BD72A951EB0D31D91BB866FFC1D9",
-      "bytes": 3810
+      "bytes": 3810,
+      "previousDefaultHashes": [
+        "16C719BDC010B9A313AB005965716BF4E765BD72A951EB0D31D91BB866FFC1D9"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/automatic-lrf-icon.png",
+      "sha256": "8C586777F0393262F6F39A40C8766BD1DC5DCC271B3E7F4793FC4ED685AAB274",
+      "bytes": 16090,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/automatic-lrf.obj",
+      "sha256": "F89245A40F36AE4D2877037588C38D14E4C73231EDD59856A7D70E97BF55A143",
+      "bytes": 2649,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/clear-window-icon.png",
+      "sha256": "1A191A67FFF99353AAAE16E2DF1E2FF42B2919813079887710C474DED31BCA7B",
+      "bytes": 3984,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/fcs-console-icon.png",
+      "sha256": "A6FE50AD64FF2042FCD153DED8CFDF85E23D42D78308D8DE36087443D170D467",
+      "bytes": 16406,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/fcs-console.obj",
+      "sha256": "00C20E000A65CD6761B947189C8D1115FA0ADB0F5CDB0DD8C7F18D51B47EFAC4",
+      "bytes": 180738,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/lrf-concept.obj",
+      "sha256": "50F190930C7F2082B4FDAD71B139DDE04C3FDAAC0368D8EC190738BAF5A4D8E1",
+      "bytes": 4277,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/lrf-icon-concept.png",
+      "sha256": "019B171F970C49385F0DD0775715BF9F4DFBFB657194CC8DCBC9F844F694DA50",
+      "bytes": 23398,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/optical-glass-icon.png",
+      "sha256": "FCD0DAB1D31986531B8F1DE44C3BFF8B97D2B693F2D1F23450152CC298833B8C",
+      "bytes": 3955,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/optical-rangefinder-icon.png",
+      "sha256": "1A69E3AE03EFCA7D0394417FF625CB7761A74DB7806AC2B6087D771D9125831B",
+      "bytes": 18783,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/optical-rangefinder.obj",
+      "sha256": "A8CAC38AF899D21347DDDEB3BE9955FBA667C9C67D96DACECEA6F595946C5EC7",
+      "bytes": 10129,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/t72-style-sight-icon.png",
+      "sha256": "5DED659553E4A495264616506521BB32325054ECF0D863BE5F95E9DF19E420E5",
+      "bytes": 6808,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/t72-style-sight.obj",
+      "sha256": "CCEA1ADE48CA9CCF857B9628E31B2E0B76871B8A6EDB9651BCBE4A467BFFB6B1",
+      "bytes": 126037,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-head-icon.png",
+      "sha256": "160725CDD9B50BA69796B894FC369112BA43123934DF9CA45F5DAC381EDDA8F5",
+      "bytes": 26456,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-head-vertical-icon.png",
+      "sha256": "BC948C3BEF4822ED65817EF6329FDF9FC33AFDD895A17BD742E8B3176CFFE61A",
+      "bytes": 4017,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-head-vertical.obj",
+      "sha256": "3B3F86554996EBFF49D9E80BC5148D57A83CD3CB1DB13C429F7D52B8358A1000",
+      "bytes": 4102,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-head.obj",
+      "sha256": "4FCFE4735A48A364156423F4762DC4EE5548E5098159B9B7CFF2BCDE8309CECA",
+      "bytes": 4135,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-lens-coating.png",
+      "sha256": "05A281C8C7B61213962CDF7FFCAC1D51EDCAF77D60EB4474E108C24AD459CFA3",
+      "bytes": 13509,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/thermal-sight-icon.png",
+      "sha256": "BADE8BB0F7615430FF8064F7656C154DAB44768AC2BBEFC732BE5A66C6848980",
+      "bytes": 1365790,
+      "previousDefaultHashes": [
+        "BADE8BB0F7615430FF8064F7656C154DAB44768AC2BBEFC732BE5A66C6848980"
+      ]
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/tinted-window-icon.png",
+      "sha256": "BC09B6303301649FDA9669991F6D8FA9A18F1B3B341F0E6D4E1E24FB6C95D616",
+      "bytes": 3974,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "BepInEx/plugins/SprocketThermalSight/assets/yellow-window-icon.png",
+      "sha256": "ACD01B662638A560FE803BEDE315D202D9BF25CA8B02161D18F566A027A89A28",
+      "bytes": 3960,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Eras/Coldwar.json",
+      "sha256": "5777B575D36852369C08E16EA17CEE9AA2275F4A31C1CBAE583E9C49EB8E8F27",
+      "bytes": 150,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/atgmAmmoBox.xml",
+      "sha256": "76DB771AB39E5F43FEEC288CF7778A0C43475E3B81106A6B3078444631BEFA7B",
+      "bytes": 544,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/atgmLauncher.xml",
+      "sha256": "A229A622D819767AE08E501493027A25FA86E5501FA78002E738BD4B9510F5F9",
+      "bytes": 635,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/automaticLaserRangefinder.xml",
+      "sha256": "5F659F8398E25CD1CB54A96CFF6DC5EF951C474A28E855736F8A2014751AC203",
+      "bytes": 269,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/clearWindowPane.xml",
+      "sha256": "6D8DB5EF7CA27548B7577756274E50A754E3F7D257DA3405DAB19B10252F460D",
+      "bytes": 310,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/hydropneumaticSuspension.xml",
       "sha256": "4F6380790F9D12C6CCC613E8F8392AA5C9F7730D7861DE9CBE4201DE45FE07FF",
-      "bytes": 990
+      "bytes": 990,
+      "previousDefaultHashes": [
+        "4F6380790F9D12C6CCC613E8F8392AA5C9F7730D7861DE9CBE4201DE45FE07FF"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/laserRangefinderSight.xml",
+      "sha256": "82D5A18FFD7D537384E04DBC53A171D30FB8AB7A480162BD3A3E9EB490956C41",
+      "bytes": 373,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/opticalCoincidenceRangefinder.xml",
+      "sha256": "7E5EECEAB26880BC13730884EB3719805D028953BA578B83C45B1C64CC0F6FFC",
+      "bytes": 352,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/sightConsole.xml",
+      "sha256": "D3294D82FA3139E63E6001BD68E399D7EB3408E4CEB967403B85826925C605B9",
+      "bytes": 453,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/smokeLauncherBank.xml",
       "sha256": "2FB20EF262C5A65CFC8E99C85D6C812BDC093AA84E54D87C03D22AC2B67023B2",
-      "bytes": 1306
+      "bytes": 1306,
+      "previousDefaultHashes": [
+        "2FB20EF262C5A65CFC8E99C85D6C812BDC093AA84E54D87C03D22AC2B67023B2"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/t72StyleSight.xml",
+      "sha256": "63595D25801428E4DDF2FCEF2906FAC77E89F6A0F8F3AE5D74F3E53013AF65C1",
+      "bytes": 277,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopeBase.xml",
       "sha256": "702FD0E8E5E83516BB48811B46293CD92B20005AE03EB447658D01D9DF9F08B2",
-      "bytes": 948
+      "bytes": 948,
+      "previousDefaultHashes": [
+        "702FD0E8E5E83516BB48811B46293CD92B20005AE03EB447658D01D9DF9F08B2"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopePart.xml",
       "sha256": "F5F604731CD22B043BD4146BEEADE7AC9064CF32EF44CD1DEE03CBEB297B549E",
-      "bytes": 998
+      "bytes": 998,
+      "previousDefaultHashes": [
+        "F5F604731CD22B043BD4146BEEADE7AC9064CF32EF44CD1DEE03CBEB297B549E"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/telescopicSightMast.xml",
       "sha256": "EC45AB0D5D1380EBFAC8EF61046A9EECDDDB0D74EC93D015BB1400373C7FC54F",
-      "bytes": 1366
+      "bytes": 1366,
+      "previousDefaultHashes": [
+        "EC45AB0D5D1380EBFAC8EF61046A9EECDDDB0D74EC93D015BB1400373C7FC54F"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSight.xml",
       "sha256": "4CB9624605B410082D15E8033B1F9F65D33E939147411866822F93D71376BFCE",
-      "bytes": 632
+      "bytes": 632,
+      "previousDefaultHashes": [
+        "4CB9624605B410082D15E8033B1F9F65D33E939147411866822F93D71376BFCE"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightLens.xml",
+      "sha256": "2C6F19A135AEEB58370D0D59FEEE0AF5003072B30C583CA51569B021C70FC426",
+      "bytes": 285,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightMk3BlackHot.xml",
       "sha256": "C25BA1A1ABF27076D5A6AEC557BBE4AB2DCB997EB187726752FC6638DF2929A3",
-      "bytes": 690
+      "bytes": 690,
+      "previousDefaultHashes": [
+        "C25BA1A1ABF27076D5A6AEC557BBE4AB2DCB997EB187726752FC6638DF2929A3"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightMk3WhiteHot.xml",
       "sha256": "6CA02C76E61331DB8402C766FD0C90A1F3FB21015D1C8CF8B4854929B2392DC7",
-      "bytes": 690
+      "bytes": 690,
+      "previousDefaultHashes": [
+        "6CA02C76E61331DB8402C766FD0C90A1F3FB21015D1C8CF8B4854929B2392DC7"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightModel1.xml",
       "sha256": "2CC4B66B9C5E27FCC918C9CAD3272FA9A82A13DD6F4F6CC064A6F5A9FEB4A05B",
-      "bytes": 714
+      "bytes": 714,
+      "previousDefaultHashes": [
+        "2CC4B66B9C5E27FCC918C9CAD3272FA9A82A13DD6F4F6CC064A6F5A9FEB4A05B"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightModel2.xml",
       "sha256": "45881C35BB8968351E75BEDF4DD0F7830664E9D7B34695DB1F826B2B4EBA65BF",
-      "bytes": 714
+      "bytes": 714,
+      "previousDefaultHashes": [
+        "45881C35BB8968351E75BEDF4DD0F7830664E9D7B34695DB1F826B2B4EBA65BF"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightModel3.xml",
       "sha256": "83EC0E5F4AB57EB202469F84F209213E86CB9B8761FD89A93C978397EB664970",
-      "bytes": 716
+      "bytes": 716,
+      "previousDefaultHashes": [
+        "83EC0E5F4AB57EB202469F84F209213E86CB9B8761FD89A93C978397EB664970"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/thermalSightVertical.xml",
+      "sha256": "55324D7AF77A89D0250772DB338981D8CBC3599B1BB5029BE651731BBCBE248D",
+      "bytes": 310,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/tintedWindowPane.xml",
+      "sha256": "674DCE938D2277E9B2FA5E0F397558B8B2B303B2AFAC5199C5631C84850B7534",
+      "bytes": 311,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Localization/en-UK/Parts/yellowWindowPane.xml",
+      "sha256": "EDF2B5FC162B775A9A1FFA2AB391F5105EB8E2D88A85672BAA467D9AE009DA11",
+      "bytes": 318,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/atgmAmmoBoxPart.json",
+      "sha256": "AAC94338A04D418702D21CCE99C45EC6F1074E9680654608FF1B3FE314E35978",
+      "bytes": 1576,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/atgmLauncherPart.json",
+      "sha256": "7AF49CACB9E731A9A3E9315CDD67815CC9CB25053FBD1BDA5AB42375E7AECA97",
+      "bytes": 1903,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/automaticLaserRangefinderPart.json",
+      "sha256": "28BF62D593448ED0C887D4F53C9D44A2123E26A2A3A7992C088D59D3EB5BB783",
+      "bytes": 1229,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/clearWindowPanePart.json",
+      "sha256": "61EE11F8B11D1DE7F5E1025D8031F2C492396F8E12499758FDCB27B7E64F6511",
+      "bytes": 1193,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/hydropneumaticSuspensionPart.json",
       "sha256": "270539B5A7138E32CE1EA5844982D5F61895EAEC4761C2BC9047041AC71F7F22",
-      "bytes": 4673
+      "bytes": 4673,
+      "previousDefaultHashes": [
+        "270539B5A7138E32CE1EA5844982D5F61895EAEC4761C2BC9047041AC71F7F22"
+      ]
     },
     {
-      "path": "Sprocket_Data/StreamingAssets/Parts/roanBustleAutoloaderPart.json",
-      "sha256": "29D397DC1ADDD05C86E45D954A4B40C44D26DF225EE3EFB91F83E6BB155BE51D",
-      "bytes": 1626
+      "path": "Sprocket_Data/StreamingAssets/Parts/laserRangefinderSightPart.json",
+      "sha256": "356FBF28450CC600688A278D800D403E8BB1221E331762AA07141B4AA21A2818",
+      "bytes": 1212,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/opticalCoincidenceRangefinderPart.json",
+      "sha256": "9EFEB925D0A1AC804933C011645B2EE2A2B91CFD93D303DED6F47AE6CEC3D1F8",
+      "bytes": 1227,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/sightConsolePart.json",
+      "sha256": "DE1208A893D90003E5971F88544193DCD64262E9765A141AE53143EE15C0CF87",
+      "bytes": 1198,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/smokeLauncherBankPart.json",
       "sha256": "454005A0430BD721FBD601B102B35DBBB425C2778A3F8B08F36985CE691282F9",
-      "bytes": 1303
+      "bytes": 1303,
+      "previousDefaultHashes": [
+        "454005A0430BD721FBD601B102B35DBBB425C2778A3F8B08F36985CE691282F9"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/sprocketBustleAutoloaderPart.json",
+      "sha256": "29D397DC1ADDD05C86E45D954A4B40C44D26DF225EE3EFB91F83E6BB155BE51D",
+      "bytes": 1626,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/t72StyleSightPart.json",
+      "sha256": "B7EF83D150763C1D40E986E33B52A0DAEBF5F27E26CC32FD61772F6E84E846B8",
+      "bytes": 1541,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/telescopeBasePart.json",
       "sha256": "D7F8B2B9D33DE5FBFEF29B3C7704B2AC16587605745E1348A22466F18D38251A",
-      "bytes": 1307
+      "bytes": 1307,
+      "previousDefaultHashes": [
+        "D7F8B2B9D33DE5FBFEF29B3C7704B2AC16587605745E1348A22466F18D38251A"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/telescopePartPart.json",
       "sha256": "06EA1EF99E69D225C305FEE6FE9DE7B13321DB6B4678D74D363C0C50AB644D25",
-      "bytes": 1308
+      "bytes": 1308,
+      "previousDefaultHashes": [
+        "06EA1EF99E69D225C305FEE6FE9DE7B13321DB6B4678D74D363C0C50AB644D25"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/telescopicSightMastPart.json",
       "sha256": "B709A34C835B08A41D31CACDCF8D8B58005BBC4BCFD9607891522BF20C960E34",
-      "bytes": 2212
+      "bytes": 2212,
+      "previousDefaultHashes": [
+        "B709A34C835B08A41D31CACDCF8D8B58005BBC4BCFD9607891522BF20C960E34"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightLensPart.json",
+      "sha256": "2179C5E62223247FE41C9881245BA86FF9E14182D3158EBB037D0B12C62ADAB6",
+      "bytes": 1201,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightMk3BlackHotPart.json",
-      "sha256": "276E47F623C714E08A299C5250CA18DDFF5FA550A4240F88023FEB540D6C7B3D",
-      "bytes": 1485
+      "sha256": "66090A8433A7A03B842FA7E4201B13A2A8AB466EB800C71839CD7B940B348663",
+      "bytes": 1451,
+      "previousDefaultHashes": [
+        "276E47F623C714E08A299C5250CA18DDFF5FA550A4240F88023FEB540D6C7B3D"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightMk3WhiteHotPart.json",
-      "sha256": "D33F983BBE46AF808695F702F9542D32DE0C88B9B98A13B164A5C5CC8B240EA8",
-      "bytes": 1485
+      "sha256": "6389FADE4A44AF551A26F797F9BBB5B58B0BE9348963D8A2DECB84B374861069",
+      "bytes": 1451,
+      "previousDefaultHashes": [
+        "D33F983BBE46AF808695F702F9542D32DE0C88B9B98A13B164A5C5CC8B240EA8"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel1Part.json",
-      "sha256": "334594B838FC855D81A53F2F7424C4D9B44D964E1A32E6FC2A6AEDED5E313BB9",
-      "bytes": 1475
+      "sha256": "FF96E0EDD3763BE355FE70465DAEC873CDD67FBD9B847B5216CC7B0F3336A4BB",
+      "bytes": 1441,
+      "previousDefaultHashes": [
+        "334594B838FC855D81A53F2F7424C4D9B44D964E1A32E6FC2A6AEDED5E313BB9"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel2Part.json",
-      "sha256": "69C1BBF461F1AFD3C2659CDA27FE76F1B5B7053AC9EF3F07E61D5C5EA5B0A9B4",
-      "bytes": 1475
+      "sha256": "F95C07BA6792CB8997A85DF8B3B192AB560E21775AC5F1EDE5F98E8ACAFD8E95",
+      "bytes": 1441,
+      "previousDefaultHashes": [
+        "69C1BBF461F1AFD3C2659CDA27FE76F1B5B7053AC9EF3F07E61D5C5EA5B0A9B4"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightModel3Part.json",
-      "sha256": "B5C0680D9EAE431B093444E5E4072C4BDFDB2454B8B70DB0D47C142D6211DF71",
-      "bytes": 1475
+      "sha256": "C0B9E3203979425D1C9DE0B0EEF112ECA98B3219A9C4666657A78EBF5F71AB04",
+      "bytes": 1441,
+      "previousDefaultHashes": [
+        "B5C0680D9EAE431B093444E5E4072C4BDFDB2454B8B70DB0D47C142D6211DF71"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightPart.json",
-      "sha256": "92BBA3D7F42AE11518AC49EA6429CB5B0B38D9C2BBE952C3F92E462236887DE2",
-      "bytes": 1463
+      "sha256": "E955F79B93646383CE8AC2DA1AAA20BF8CB1F0331F15424EA5ADD843166AED09",
+      "bytes": 1502,
+      "previousDefaultHashes": [
+        "92BBA3D7F42AE11518AC49EA6429CB5B0B38D9C2BBE952C3F92E462236887DE2"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/thermalSightVerticalPart.json",
+      "sha256": "95C85132A6CFD7171CD2591C069167C03E243D7BD373890F408163782652A06B",
+      "bytes": 1518,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/tintedWindowPanePart.json",
+      "sha256": "1C6848C9D5EA2E5F55350575E6A705D7BD2E67E390EE8DFE836E4E3530C7F71E",
+      "bytes": 1195,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/yellowWindowPanePart.json",
+      "sha256": "1069992213CD95AD3FAC05B75D3ED5673104264045BA38538F1D5299C8CD1EBC",
+      "bytes": 1195,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/AdvancedArmourSteel.json",
       "sha256": "C6FBE2BDA871D65EA23CD59927DF020221E4DD072408F7650D310D204D57198A",
-      "bytes": 216
+      "bytes": 216,
+      "previousDefaultHashes": [
+        "C6FBE2BDA871D65EA23CD59927DF020221E4DD072408F7650D310D204D57198A"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/AluminiumArmour.json",
       "sha256": "01A4C8658362E5EBDC084AEF24E3EF7B1209A66D76653EA5072045B0B7CD4F22",
-      "bytes": 212
+      "bytes": 212,
+      "previousDefaultHashes": [
+        "01A4C8658362E5EBDC084AEF24E3EF7B1209A66D76653EA5072045B0B7CD4F22"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/AramidSpallLiner.json",
       "sha256": "B211228D43D68C647F2765CEB8E711B418BCE7F61CAE975BEAF7429DD33CA35F",
-      "bytes": 208
+      "bytes": 208,
+      "previousDefaultHashes": [
+        "B211228D43D68C647F2765CEB8E711B418BCE7F61CAE975BEAF7429DD33CA35F"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/CastArmour.json",
       "sha256": "54987ABC9FD2E27CAC755AC89EA43CC000605EAEB6024ECDCB88113056911CC6",
-      "bytes": 209
+      "bytes": 209,
+      "previousDefaultHashes": [
+        "54987ABC9FD2E27CAC755AC89EA43CC000605EAEB6024ECDCB88113056911CC6"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/CeramicArray.json",
       "sha256": "8E883F016434BD9E1F55D13389E0D581AB5CD42AE1708A2381C87F634FD79D7A",
-      "bytes": 210
+      "bytes": 210,
+      "previousDefaultHashes": [
+        "8E883F016434BD9E1F55D13389E0D581AB5CD42AE1708A2381C87F634FD79D7A"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/CWEP_Cannon.json",
       "sha256": "404C3D2EBA2C6B5A7245F097811CD6808223AB27E29C1F8F6CDD87D4143EA516",
-      "bytes": 260
+      "bytes": 260,
+      "previousDefaultHashes": [
+        "404C3D2EBA2C6B5A7245F097811CD6808223AB27E29C1F8F6CDD87D4143EA516"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/CWEP_Engine.json",
       "sha256": "CA5DF98EE2E0FD046AF5C441336F75D56C1843D6C41A070463A6A4E2DDCD1C2B",
-      "bytes": 176
+      "bytes": 176,
+      "previousDefaultHashes": [
+        "CA5DF98EE2E0FD046AF5C441336F75D56C1843D6C41A070463A6A4E2DDCD1C2B"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/ElastomerNERA.json",
       "sha256": "91B9D35AE8784D054CAFA816BBB4AFCDC34CBE64BB4BF674D2B1E4E153794F1E",
-      "bytes": 207
+      "bytes": 207,
+      "previousDefaultHashes": [
+        "91B9D35AE8784D054CAFA816BBB4AFCDC34CBE64BB4BF674D2B1E4E153794F1E"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/glassTextolite.json",
       "sha256": "6540E10B329DC92BD61523D5F9BD0B8244D9460AE90B211C2168F43E01EF67E3",
-      "bytes": 212
+      "bytes": 212,
+      "previousDefaultHashes": [
+        "6540E10B329DC92BD61523D5F9BD0B8244D9460AE90B211C2168F43E01EF67E3"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/HeavyAlloyInsert.json",
       "sha256": "8167F23CF01A64233F996C953CF35C166FEF01B9CEA24D631E55EFB2E1D4FC19",
-      "bytes": 214
+      "bytes": 214,
+      "previousDefaultHashes": [
+        "8167F23CF01A64233F996C953CF35C166FEF01B9CEA24D631E55EFB2E1D4FC19"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/heavyEraCassette.json",
       "sha256": "897AC72FC8F2528E709FA3868C686CF609905AA919D34F8C7BD3EED4C0C20DA9",
-      "bytes": 218
+      "bytes": 218,
+      "previousDefaultHashes": [
+        "897AC72FC8F2528E709FA3868C686CF609905AA919D34F8C7BD3EED4C0C20DA9"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/HighHardnessSteel.json",
       "sha256": "6321F5537C9EEC653B7ADA6A5BC074816FC1BB7062C40FDBD89D663858D9B577",
-      "bytes": 215
+      "bytes": 215,
+      "previousDefaultHashes": [
+        "6321F5537C9EEC653B7ADA6A5BC074816FC1BB7062C40FDBD89D663858D9B577"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/lightEraCassette.json",
       "sha256": "61BF1FFEB02935FBCBF424B8BD27DABCE94E506140E7E4B2247315AF3415A3E8",
-      "bytes": 218
+      "bytes": 218,
+      "previousDefaultHashes": [
+        "61BF1FFEB02935FBCBF424B8BD27DABCE94E506140E7E4B2247315AF3415A3E8"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/MagnesiumAlloy.json",
       "sha256": "2A438B532F97250CBA12BC4688E0C7321B8A9A75F9F58C712EE4A7774692BD65",
-      "bytes": 209
+      "bytes": 209,
+      "previousDefaultHashes": [
+        "2A438B532F97250CBA12BC4688E0C7321B8A9A75F9F58C712EE4A7774692BD65"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/neraCassette.json",
       "sha256": "4424B0235DB1FCB551F321710E083AC42E9158A4C0CFA7DC61C6DED8CBE22A17",
-      "bytes": 217
+      "bytes": 217,
+      "previousDefaultHashes": [
+        "4424B0235DB1FCB551F321710E083AC42E9158A4C0CFA7DC61C6DED8CBE22A17"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/passiveComposite.json",
       "sha256": "9A883EB02D462FFB2683E64FB69980F81E82158585336EC5108FA47C38328E32",
-      "bytes": 214
+      "bytes": 214,
+      "previousDefaultHashes": [
+        "9A883EB02D462FFB2683E64FB69980F81E82158585336EC5108FA47C38328E32"
+      ]
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-ap.json",
+      "sha256": "A2435A47464FDD4CFBB4798B7BAE7259E84F03FB1A2D4968E2DF37726FDF937F",
+      "bytes": 135,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-apfsds.json",
+      "sha256": "F251033ABA51FB52AEBD57932498F56D52452C30BB7EDF6330911CD8BC6115FA",
+      "bytes": 139,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-aphe.json",
+      "sha256": "8DFBDBBAF5E413250BE2082E142DC27FD6EDB79B6CD62214DC95ECDD5C858A82",
+      "bytes": 137,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-atgm_gun.json",
+      "sha256": "9573F04196F0BA2D5119A0E0D63778FC092E047748D1053A2A62531DEF30E812",
+      "bytes": 141,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-atgm.json",
+      "sha256": "EDAA211936FCAC159D9A6046FC98EFFA194C943AE6892DAA9939F89371913C35",
+      "bytes": 137,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-he.json",
+      "sha256": "DE32823C435A79648B208D058FCED689854B5E237D82099D71224D0C39EDAACA",
+      "bytes": 135,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-heat-modern.json",
+      "sha256": "6C088F491401FFA215ADB61F816B7695A431A7D23C0A3A900B6EED05B69DFA01",
+      "bytes": 170,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-heat.json",
+      "sha256": "F714281BE277A036B5EACBB7532E856031859058C71B682B7AB0DF451ACA4614",
+      "bytes": 172,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/ShellSelector-hesh.json",
+      "sha256": "96DFAEDF4C95A4BE30859504459C4805EF0DEF2E759D412D048F784A3304F37E",
+      "bytes": 137,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/SprocketStabilization.json",
+      "sha256": "7782BF7E433F0B4F3D2488E90FDBB0EE8C725BCE7D95E2D0D13CADA7BB1AFBD5",
+      "bytes": 208,
+      "previousDefaultHashes": []
+    },
+    {
+      "path": "Sprocket_Data/StreamingAssets/Technology/SprocketStabilizationTraverseMotor.json",
+      "sha256": "0753817AE041284DCAB10BA804257D9C41E5E3CBEB303F09AD9B2B44AC70EBBE",
+      "bytes": 156,
+      "previousDefaultHashes": []
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/StructuralSteel.json",
       "sha256": "DA037306A418BB43BB9D0D51662814697A10398A042ABE2A497F94A744810913",
-      "bytes": 212
+      "bytes": 212,
+      "previousDefaultHashes": [
+        "DA037306A418BB43BB9D0D51662814697A10398A042ABE2A497F94A744810913"
+      ]
     },
     {
       "path": "Sprocket_Data/StreamingAssets/Technology/TitaniumArmour.json",
       "sha256": "7CE59F2FD808166DFB8AFBE66B0B889784B0B67E20B8F982386D2B16018376A6",
-      "bytes": 211
+      "bytes": 211,
+      "previousDefaultHashes": [
+        "7CE59F2FD808166DFB8AFBE66B0B889784B0B67E20B8F982386D2B16018376A6"
+      ]
     }
   ],
-  "mastAssetRevision": "0.3.8-postwar.1"
+  "mastAssetRevision": "0.3.8-postwar.1",
+  "retiredFiles": [
+    {
+      "path": "Sprocket_Data/StreamingAssets/Parts/roanBustleAutoloaderPart.json",
+      "replacement": "Sprocket_Data/StreamingAssets/Parts/sprocketBustleAutoloaderPart.json",
+      "knownHashes": [
+        "29D397DC1ADDD05C86E45D954A4B40C44D26DF225EE3EFB91F83E6BB155BE51D"
+      ]
+    }
+  ]
 }
