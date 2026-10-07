@@ -66,6 +66,8 @@ The installer writes a backup journal. Use `./Restore-Pack.ps1 -BackupDir 'C:/pa
 
 ## Credits and support
 
+**Wolfosito** created the T72 gunner sight and FCS models.
+
 Sprocket is created by Hamish. BepInEx, Harmony and Il2CppInterop provide the framework. Mod work uses AI assistance. Module licenses and asset credits are included in Docs; no game binaries, loader, generated interop/cache or private saves/logs are bundled. The automatic rangefinder housing/icon are original assets.
 
 [Support my ChatGPT budget and help me reverse engineer Sprocket to make more mods.](https://www.paypal.com/donate/?hosted_button_id=7PE3SDBETXFQ6)

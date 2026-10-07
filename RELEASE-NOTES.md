@@ -15,3 +15,4 @@ Changes since **0.1.1**:
 Requires Sprocket 0.2.55.5 / BepInEx 6 IL2CPP 6.0.0-be.788. Close the game, back up saves and preserve custom configs/profiles/native data. Use the included installer to preview the update. Existing settings take precedence; see README for enabling automatic ammo-box feed after an update, FCS linking and rollback.
 
 [Support my ChatGPT budget and help me reverse engineer Sprocket to make more mods.](https://www.paypal.com/donate/?hosted_button_id=7PE3SDBETXFQ6)
+**Wolfosito** created the T72 gunner sight and FCS models.
