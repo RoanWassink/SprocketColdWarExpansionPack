@@ -1,28 +1,38 @@
 # Sprocket Cold War Expansion Pack
 
-**[Download the full pack 0.2.0](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/tag/v0.2.0)** — beta for Sprocket 0.2.55.5, Windows x64, BepInEx 6 IL2CPP 6.0.0-be.788.
+**[Download the full pack 0.3.0](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/tag/v0.3.0)** — beta for Sprocket 0.2.55.5, Windows x64 and BepInEx 6 IL2CPP 6.0.0-be.788.
 
-The full pack includes the core and ten coordinated modules in total. **Choose the full pack or the core-only ZIP; you do not need both.** The [Sprocket Mod Loader](https://github.com/Hans21223/Sprocket-Mod-Loader) is a separate prerequisite. GitHub's Code > Download ZIP contains source, not an installed mod pack.
+Build and test Cold War vehicles with eleven coordinated modules. The full pack includes the core and shared APIs. The separate **core-only download remains 0.2.0** and does not contain these new gameplay features. Install the [Sprocket Mod Loader](https://github.com/Hans21223/Sprocket-Mod-Loader) separately. GitHub Code > Download ZIP is source code.
 
-## What's new since 0.1.1
+## New in 0.3.0 — create, protect and test
 
-- Dedicated square ATGM launcher, one initial missile per launcher, and a nearby finite ATGM ammo box.
-- Optical and laser rangefinders, automatic ballistic ranging including APFSDS, internal FCS linked to external sights, horizontal/vertical thermal heads, T72 style sight, scalable glass panes and updated icons.
-- Both-axis drive tuning at the elevation drive, with stronger postwar turret motors.
-- Mirror feed-arm option for the bustle autoloader.
-- Short armour tooltips explaining protection benefits and useful thicknesses.
-- Native dated Era/Technology data controls availability and engine pricing, replacing hidden overrides.
-- Compatible settings/vehicle migration to neutral addon identifiers for the updated modules.
+| New feature | What you can do |
+|---|---|
+| **In-game shell editor** | Add, duplicate and edit shared shells, then save and refresh without restarting. |
+| **Modular ammunition** | Choose supported penetrator, payload, guidance and motor modules to build your own shell or missile. |
+| **In-game material editor** | Create materials and choose a supported special behaviour, including NERA and ERA. Save refreshes the material and armour response data. |
+| **Placeable ERA** | Fit Kontakt-1, Kontakt-5, Relikt, Nizh and Duplet modules with distinct protection presets. Activated sections become spent and their active visual disappears. |
+| **Turret and hull ERA variants** | Use slimmer turret plates and an elongated, gently bowed Duplet hull variant with three independently consumed zones. ERA models use vehicle paint. |
+| **On-screen damage feed** | Enable a Play-mode feed showing penetration, remaining penetration, ERA activation and detected crew/component damage. |
+| **Wire-guided missile visuals** | Use a TOW-inspired example; detached cable falls and settles instead of hanging in the air. |
+| **Chemical ammunition corrections** | HEAT and HESH keep their configured penetration budget across flight distance; impact angle and armour spacing still matter. |
+| **TPD-K1 gunner's sight** | Fit the two-colour blue-green/amber optic with an integrated manual laser rangefinder. Updated sight/FCS models correct orientation and surface issues. |
+| **Visible carousel ammunition** | The static Russian-style carousel model displays the native magazine's remaining stock. |
+| **Assisted loader** | A crew-operated loading aid gives more help with heavy, long ammunition. Light ammunition can be faster to load by hand. A crew badge distinguishes its icon. |
+| **Shared JSON editor framework** | Shell and material editors share a reusable UI; other mods can supply their own fields, validation and refresh logic. |
+
+These are gameplay models, not manufacturer-certified armour or weapon specifications. The carousel model is static. ERA does not simulate sympathetic detonation or tandem-warhead defeat; the Duplet hull's three zones are a gameplay partition. Damage messages report detected events and may not describe every fragment or component hit.
 
 ## Included modules
 
 | Module | Version |
 |---|---|
 | Cold War Core | 0.2.0 |
-| Shell Selector | 0.12.5 |
-| Material Selector | 0.4.8 |
-| Thermal Sight | 0.2.6 |
-| Carousel Autoloader | 0.2.12 |
+| JSON Editor | 0.1.0 |
+| Shell Selector | 0.13.0 |
+| Material Selector | 0.5.0 |
+| Thermal Sight | 0.2.7 |
+| Carousel Autoloader | 0.2.14 |
 | Stabilization | 0.1.0 |
 | Keybinds API | 0.1.6 |
 | Hydropneumatic | 0.4.2 |
@@ -36,13 +46,13 @@ Hydropneumatic, Mast and Smoke retain their existing public gameplay builds. Eac
 1. Install the separate loader and start/close Sprocket once. Close the game before every mod update.
 2. Back up vehicle saves and the mod files you intend to replace.
 3. Recommended: run `./Install-Pack.ps1 -GameDir 'C:/path/to/Sprocket'` in PowerShell to preview the plan, then repeat with `-Apply`. The installer verifies hashes, backs up changed files and preserves existing configs, profile catalogues, custom Technology/Era data and audio overrides.
-4. For a manual install, merge **Payload/BepInEx** and **Payload/Sprocket_Data** into the folder containing Sprocket.exe. Replace matching DLLs/assets and retain one copy of each plugin. Never replace the entire BepInEx folder. Preserve existing config/catalogue files and customized native data. Copy missing defaults only.
+4. For a manual install, merge **Payload/BepInEx** and **Payload/Sprocket_Data** into the folder containing Sprocket.exe. Replace matching DLLs/assets and retain one copy of each plugin. Never replace the entire BepInEx folder. Preserve existing config/catalogue files and customized native data. Copy missing defaults only. When updating manually, merge missing response recipes and ERA binding routes as described in Material Selector’s guide; do not replace your custom catalogue.
 5. Copy the new `sprocketBustleAutoloaderPart.json`, then back up/remove the exact older `roanBustleAutoloaderPart.json` from Parts. The part's GUID is unchanged; do not load both definitions. The installer handles the known original file.
 6. Start Sprocket. Review the updated module settings and your customized technology dates.
 
 Existing settings take precedence. The updated modules copy their previous CFG only when the neutral CFG is absent, retaining the original for rollback. Thermal controls require the included API 0.1.6. Do not install private API copies alongside it. Existing keybind choices, profile IDs and material IDs are retained. Back up vehicles: new saves use neutral keys that older plugins may not read.
 
-Fresh pack defaults enable armour responses and automatic ATGM-box feeding. Existing catalogues/configs are preserved. For an update from 0.1.1, enable `AutomaticAmmoBox = true` in `[ATGM Launcher Tests]` in `BepInEx/config/sprocket.shellselector.cfg` if you want the box to load automatically; restart. `InitialReadyMissile` controls the first missile and `OpticalSightDirection` controls the optional dedicated-launcher sight initialization. A gunner and a matching SACLOS/MCLOS profile remain necessary; Vanilla ammunition is not a ready guided missile.
+Fresh pack defaults enable armour responses and automatic ATGM-box feeding. The installer appends missing armour recipes and ERA binding routes while preserving existing settings and recipes. Conflicting bindings stop the preflight before writes. For an update from 0.1.1, enable `AutomaticAmmoBox = true` in `[ATGM Launcher Tests]` in `BepInEx/config/sprocket.shellselector.cfg` if you want the box to load automatically; restart. `InitialReadyMissile` controls the first missile and `OpticalSightDirection` controls the optional dedicated-launcher sight initialization. A gunner and a matching SACLOS/MCLOS profile remain necessary; Vanilla ammunition is not a ready guided missile.
 
 ## Using the additions
 
@@ -52,7 +62,7 @@ Fresh pack defaults enable armour responses and automatic ATGM-box feeding. Exis
 
 **Stabilization:** select an elevation drive and open Stabilization drive setup. Strength uses a compact display scale; turret Torque and Ratio use native drive controls. More torque improves acceleration and holding strength, while a lower ratio increases top speed. Balance, crew, native mass/cost and gearing still matter. This tunes native tracking; it does not guarantee perfect aim over every bump. Default availability starts on 3 September 1945.
 
-**Armour:** hover Protection for concise strengths, reaction/thickness limits and tradeoffs. Passive armour and reactive recipes differ. Extra reactions require the enabled shared catalogue and paired Shell/Material modules. Existing protection coefficients are unchanged.
+**Armour:** hover Protection for concise strengths, reaction/thickness limits and tradeoffs. Passive armour and reactive recipes differ. Extra reactions require the enabled shared catalogue and paired Shell/Material modules. The new placeable presets have distinct protection recipes; see the material editor and tooltips for their conditions.
 
 ## Customize and troubleshoot
 
@@ -62,7 +72,7 @@ If a module is absent, inspect BepInEx/LogOutput.log for missing dependencies or
 
 ## Rollback or remove
 
-The installer writes a backup journal. Use `./Restore-Pack.ps1 -BackupDir 'C:/path/to/backup' -GameDir 'C:/path/to/Sprocket'` to preview rollback, then add `-Apply`. Restore pre-update vehicle copies when reverting saved-key changes. Existing configs and saves that the installer preserved are not rolled back. Before uninstalling custom parts/materials, remove them from vehicles you intend to keep using. Remove only owned files and leave shared dependencies needed by other mods intact.
+The installer writes a backup journal. Use `./Restore-Pack.ps1 -BackupDir 'C:/path/to/backup' -GameDir 'C:/path/to/Sprocket'` to preview rollback, then add `-Apply`. Restore pre-update vehicle copies when reverting saved-key changes. Untouched settings and saves are not rolled back. Catalogue files merged by this update are included in the backup journal; rollback restores their original content. Before uninstalling custom parts/materials, remove them from vehicles you intend to keep using. Remove only owned files and leave shared dependencies needed by other mods intact.
 
 ## Credits and support
 

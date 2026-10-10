@@ -18,13 +18,13 @@ $plans=@()
 foreach($entry in $manifest.files){
  $target=Resolve-Target $entry.path;$exists=Test-Path -LiteralPath $target
  $settings=$entry.path.StartsWith('BepInEx/config/') -or $entry.path -eq 'BepInEx/plugins/SprocketThermalSight/thermal-models.json'
- $native=$entry.path.StartsWith('Sprocket_Data/StreamingAssets/Technology/') -or $entry.path.StartsWith('Sprocket_Data/StreamingAssets/Eras/')
+ $asset=[IO.Path]::GetExtension($entry.path) -ne '.dll'
  $action='Install'
  if($exists){
   $hash=(Get-FileHash -LiteralPath $target).Hash
   if($settings){$action='Preserve settings'}
   elseif($hash -eq $entry.sha256){$action='Already current'}
-  elseif($native -and $hash -notin @($entry.previousDefaultHashes)){$action='Preserve custom native data'}
+  elseif($asset -and $hash -notin @($entry.previousDefaultHashes)){$action='Preserve custom asset'}
   else{$action='Replace'}
  }elseif($aliases.ContainsKey($entry.path) -and (Test-Path -LiteralPath (Resolve-Target $aliases[$entry.path]))){$action='Preserve legacy settings'}
  $plans+=@([pscustomobject]@{Path=$entry.path;Action=$action;Existed=$exists;BeforeHash=$(if($exists){(Get-FileHash -LiteralPath $target).Hash}else{$null})})
@@ -37,12 +37,14 @@ foreach($retired in $manifest.retiredFiles){
   $plans+=@([pscustomobject]@{Path=$retired.path;Action='Retire duplicate part';Existed=$true;BeforeHash=$hash})
  }
 }
+$merged=@(& (Join-Path $PSScriptRoot 'Merge-Catalogues.ps1') -GameDir $game)
+foreach($entry in $merged){$plans=@($plans|Where-Object Path -ne $entry.Path)+@($entry)}
 $plans|Format-Table Action,Path -AutoSize
 if(!$Apply){'Plan only. Add -Apply to install with verified backups.';return}
 $backup=Join-Path ([IO.Path]::GetFullPath($BackupRoot)) ('pack-update-'+(Get-Date -Format 'yyyyMMdd-HHmmss-fff'))
 if($backup.StartsWith($prefix,[StringComparison]::OrdinalIgnoreCase) -or (Test-Path -LiteralPath $backup)){throw 'Unsafe or existing backup directory'}
 New-Item -ItemType Directory -Path $backup|Out-Null
-$changes=@($plans|Where-Object Action -in @('Install','Replace','Retire duplicate part'))
+$changes=@($plans|Where-Object Action -in @('Install','Replace','Retire duplicate part','Merge missing catalogue entries'))
 foreach($plan in $changes){
  $target=Resolve-Target $plan.Path
  if($plan.Existed){
@@ -59,10 +61,15 @@ foreach($plan in $changes|Where-Object Action -ne 'Retire duplicate part'){
  $target=Resolve-Target $plan.Path
  if(!$plan.Existed -and (Test-Path -LiteralPath $target)){throw 'New target appeared; stopped to preserve it'}
  if($plan.Existed -and (Get-FileHash -LiteralPath $target).Hash -ne $plan.BeforeHash){throw 'Target changed after backup; stopped to preserve it'}
- $source=Join-Path $PSScriptRoot ('Payload/'+$plan.Path)
  New-Item -ItemType Directory -Force ([IO.Path]::GetDirectoryName($target))|Out-Null
- Copy-Item -LiteralPath $source -Destination $target -Force
- if((Get-FileHash -LiteralPath $source).Hash -ne (Get-FileHash -LiteralPath $target).Hash){throw 'Installed hash mismatch'}
+ if($plan.Action -eq 'Merge missing catalogue entries'){
+  [IO.File]::WriteAllText($target,$plan.Updated,[Text.UTF8Encoding]::new($false))
+  if([IO.File]::ReadAllText($target) -cne $plan.Updated){throw 'Merged catalogue verification failed'}
+ }else{
+  $source=Join-Path $PSScriptRoot ('Payload/'+$plan.Path)
+  Copy-Item -LiteralPath $source -Destination $target -Force
+  if((Get-FileHash -LiteralPath $source).Hash -ne (Get-FileHash -LiteralPath $target).Hash){throw 'Installed hash mismatch'}
+ }
 }
 foreach($plan in $changes|Where-Object Action -eq 'Retire duplicate part'){
  if(Get-Process -Name Sprocket -ErrorAction SilentlyContinue){throw 'Sprocket started; stopped before retirement'}
