@@ -1,10 +1,15 @@
 # Sprocket Cold War Expansion Pack
 
-**[Download the full pack 0.3.0](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/tag/v0.3.0)** — beta for Sprocket 0.2.55.5, Windows x64 and BepInEx 6 IL2CPP 6.0.0-be.788.
+**[Download the full pack 0.3.1](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/tag/v0.3.1)** — beta for Sprocket 0.2.55.5, Windows x64 and BepInEx 6 IL2CPP 6.0.0-be.788.
 
 Build and test Cold War vehicles with eleven coordinated modules. The full pack includes the core and shared APIs. The separate **core-only download remains 0.2.0** and does not contain these new gameplay features. Install the [Sprocket Mod Loader](https://github.com/Hans21223/Sprocket-Mod-Loader) separately. GitHub Code > Download ZIP is source code.
 
-## New in 0.3.0 — create, protect and test
+## New in 0.3.1
+
+- **Stronger full-calibre recoil:** HE, APHE and other non-rocket full-bore profiles now retain at least the native recoil of the same cannon and propellant charge. Penetration and damage balance are unchanged. APFSDS and ATGM recoil remain unchanged.
+- **Cleaner damage feed:** crew and component messages report direct projectile and spall damage. Repeated messages from ongoing fires are excluded, and repeated hits on the same component within one shot are combined. Penetration and ERA activation remain visible.
+
+## Features — create, protect and test
 
 | New feature | What you can do |
 |---|---|
@@ -13,7 +18,7 @@ Build and test Cold War vehicles with eleven coordinated modules. The full pack 
 | **In-game material editor** | Create materials and choose a supported special behaviour, including NERA and ERA. Save refreshes the material and armour response data. |
 | **Placeable ERA** | Fit Kontakt-1, Kontakt-5, Relikt, Nizh and Duplet modules with distinct protection presets. Activated sections become spent and their active visual disappears. |
 | **Turret and hull ERA variants** | Use slimmer turret plates and an elongated, gently bowed Duplet hull variant with three independently consumed zones. ERA models use vehicle paint. |
-| **On-screen damage feed** | Enable a Play-mode feed showing penetration, remaining penetration, ERA activation and detected crew/component damage. |
+| **On-screen damage feed** | Enable a Play-mode feed showing penetration, remaining penetration, ERA activation and direct crew/component damage. |
 | **Wire-guided missile visuals** | Use a TOW-inspired example; detached cable falls and settles instead of hanging in the air. |
 | **Chemical ammunition corrections** | HEAT and HESH keep their configured penetration budget across flight distance; impact angle and armour spacing still matter. |
 | **TPD-K1 gunner's sight** | Fit the two-colour blue-green/amber optic with an integrated manual laser rangefinder. Updated sight/FCS models correct orientation and surface issues. |
@@ -29,7 +34,7 @@ These are gameplay models, not manufacturer-certified armour or weapon specifica
 |---|---|
 | Cold War Core | 0.2.0 |
 | JSON Editor | 0.1.0 |
-| Shell Selector | 0.13.0 |
+| Shell Selector | 0.13.2 |
 | Material Selector | 0.5.0 |
 | Thermal Sight | 0.2.7 |
 | Carousel Autoloader | 0.2.14 |

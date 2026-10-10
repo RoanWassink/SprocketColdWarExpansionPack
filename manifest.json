@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "SprocketColdWarExpansionPack",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "status": "beta",
   "gameVersion": "0.2.55.5",
   "unityVersion": "6000.3.21f1",
@@ -26,8 +26,8 @@
       "file": "BepInEx/plugins/SprocketShellSelector.dll",
       "guid": "sprocket.shellselector",
       "name": "Sprocket Shell Selector",
-      "version": "0.13.0",
-      "sha256": "33D1D65D907CA619D97CAC4E0489642D999DAFEEE8FDE41907D3C1ACE54F77A3"
+      "version": "0.13.2",
+      "sha256": "67F6151588DF37328815CC6463FCF6D078C9E098F17232E3A7D7302BFB6356EB"
     },
     {
       "file": "BepInEx/plugins/SprocketColdWarExpansionPack/SprocketColdWarExpansionPack.dll",
@@ -448,8 +448,8 @@
     },
     {
       "path": "BepInEx/plugins/SprocketShellSelector.dll",
-      "sha256": "33D1D65D907CA619D97CAC4E0489642D999DAFEEE8FDE41907D3C1ACE54F77A3",
-      "bytes": 856576,
+      "sha256": "67F6151588DF37328815CC6463FCF6D078C9E098F17232E3A7D7302BFB6356EB",
+      "bytes": 859648,
       "previousDefaultHashes": [
         "33D1D65D907CA619D97CAC4E0489642D999DAFEEE8FDE41907D3C1ACE54F77A3",
         "6BC177182EF658845E3B707C9B363725B3123A2459C8066260F308F006535782",
