@@ -25,7 +25,7 @@ These are gameplay models, not manufacturer-certified armour or weapon specifica
 
 Close Sprocket and use the included installer. Keep your customized shell, material, armour-response, keybind and thermal catalogues. The JSON Editor is included once in the full pack; standalone Shell and Material installations also need it. Material Selector 0.5.0 requires the matching Shell Selector 0.13.x for armour responses and ERA.
 
-Existing vehicle part GUIDs are retained. Existing one-zone Duplet hull parts remain compatible; place the new three-zone variant to use independent zones. Do not install duplicate copies of plugin DLLs or native part definitions. See the README for fresh installation, updates and rollback.
+Existing vehicle part GUIDs are retained. Do not install duplicate copies of plugin DLLs or native part definitions. See the README for fresh installation, updates and rollback.
 
 **Wolfosito** created the T72 gunner sight and FCS models.
 
