@@ -1,5 +1,7 @@
 # Sprocket Cold War Expansion Pack
 
+<!-- sp-compat {"hamish.sprocket": ">=0.2.55.5", "bepinex.bepinex": "6.0.0-be.788"} -->
+
 **[Download the full pack 0.3.1](https://github.com/RoanWassink/SprocketColdWarExpansionPack/releases/tag/v0.3.1)** — beta for Sprocket 0.2.55.5, Windows x64 and BepInEx 6 IL2CPP 6.0.0-be.788.
 
 Build and test Cold War vehicles with eleven coordinated modules. The full pack includes the core and shared APIs. The separate **core-only download remains 0.2.0** and does not contain these new gameplay features. Install the [Sprocket Mod Loader](https://github.com/Hans21223/Sprocket-Mod-Loader) separately. GitHub Code > Download ZIP is source code.
